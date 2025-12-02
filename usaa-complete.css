@@ -1088,6 +1088,16 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .hero-section {
+
+        margin-top: 48px;
+
+    }
+
+}
+
 @media (min-width: 768px) {
 
     .hero-section {
@@ -1318,11 +1328,37 @@ img {
 
     }
 
-    .services-view-more-button {
+    .services-view-more-link {
 
-        width: 100%;
+        color: var(--usaa-link-blue);
 
-        max-width: 300px;
+        text-decoration: none;
+
+        font-family: 'Gotham Narrow', Arial, sans-serif;
+
+        font-size: 1rem;
+
+        font-weight: 500;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+    }
+
+    .services-view-more-link:hover {
+
+        text-decoration: underline;
+
+    }
+
+    .services-view-more-arrow {
+
+        font-size: 1.2em;
+
+        line-height: 1;
 
     }
 
