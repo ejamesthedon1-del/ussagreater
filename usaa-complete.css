@@ -1,0 +1,3768 @@
+/* USAA Complete Homepage - Exact Replica CSS */
+
+/* ============================================
+
+   CSS VARIABLES - EXACT FROM USAA
+
+   ============================================ */
+
+:root {
+
+    /* Colors */
+
+    --usaa-navy: #0b2237;
+
+    --usaa-header-blue: #12395b;
+
+    --usaa-border-blue: #41617c;
+
+    --usaa-link-blue: #006ec8;
+
+    --usaa-link-hover: #0058a0;
+
+    --usaa-white: #fff;
+
+    --usaa-light-bg: #f3f3f3;
+
+    --usaa-border-gray: #dadbdc;
+
+    --usaa-secondary-gray: #8b8d8f;
+
+    --usaa-text-secondary: #4e4e4f;
+
+    
+
+    /* Spacing */
+
+    --spacing-xs: 8px;
+
+    --spacing-sm: 16px;
+
+    --spacing-md: 24px;
+
+    --spacing-lg: 32px;
+
+    --spacing-xl: 48px;
+
+    --spacing-xxl: 64px;
+
+}
+
+/* ============================================
+
+   RESET & BASE STYLES
+
+   ============================================ */
+
+*, *:before, *:after {
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    -webkit-text-size-adjust: 100%;
+
+    background: #fff;
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+
+}
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-weight: 400;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-size: 1em;
+
+    font-weight: 400;
+
+    margin: 0;
+
+}
+
+a {
+
+    color: var(--usaa-link-blue);
+
+    text-decoration: underline;
+
+}
+
+a:visited {
+
+    color: var(--usaa-navy);
+
+}
+
+a:hover, a:focus {
+
+    color: var(--usaa-link-hover);
+
+}
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    vertical-align: middle;
+
+}
+
+/* ============================================
+
+   SKIP TO CONTENT
+
+   ============================================ */
+
+.usaa-skipToContent {
+
+    background: #fff;
+
+    display: block;
+
+    font-size: 0.889rem;
+
+    font-weight: 500;
+
+    left: 50%;
+
+    line-height: 2;
+
+    margin-left: -5em;
+
+    position: absolute;
+
+    text-align: center;
+
+    top: 2px;
+
+    width: 10em;
+
+    z-index: 3000;
+
+    clip: rect(1px, 1px, 1px, 1px);
+
+    border: 0;
+
+    clip-path: inset(100%);
+
+    height: 1px;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    white-space: nowrap;
+
+}
+
+.usaa-skipToContent:focus {
+
+    clip: auto;
+
+    clip-path: none;
+
+    height: auto;
+
+    width: auto;
+
+}
+
+/* ============================================
+
+   HEADER
+
+   ============================================ */
+
+.usaa-globalHeader {
+
+    background: var(--usaa-header-blue);
+
+    color: var(--usaa-white);
+
+    position: relative;
+
+    z-index: 2001;
+
+}
+
+.usaa-globalHeader-wrapper {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    max-width: 1200px;
+
+    padding: 16px 0;
+
+}
+
+.usaa-globalHeader-container {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0 16px;
+
+}
+
+@media (min-width: 768px) {
+
+    .usaa-globalHeader-container {
+
+        padding: 0 24px;
+
+    }
+
+}
+
+/* Logo */
+
+.usaa-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-right: 40px;
+
+}
+
+.usaa-logo a {
+
+    display: block;
+
+    text-decoration: none;
+
+}
+
+.usaa-logo-img {
+
+    height: 100px;
+
+    width: auto;
+
+    display: block;
+
+}
+
+/* Navigation */
+
+.usaa-globalNav {
+
+    display: none;
+
+    align-items: center;
+
+    flex: 1;
+
+}
+
+@media (min-width: 992px) {
+
+    .usaa-globalNav {
+
+        display: flex;
+
+    }
+
+}
+
+.usaa-globalNav-list {
+
+    display: flex;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    gap: 0;
+
+}
+
+.usaa-globalNav-item {
+
+    position: relative;
+
+}
+
+.usaa-globalNav-button,
+
+.usaa-globalNav-link {
+
+    background: none;
+
+    border: none;
+
+    color: var(--usaa-white);
+
+    cursor: pointer;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    letter-spacing: 0;
+
+    padding: 12px 20px;
+
+    text-decoration: none;
+
+    transition: background-color 0.2s ease;
+
+    display: block;
+
+}
+
+.usaa-globalNav-button:hover,
+
+.usaa-globalNav-link:hover {
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+/* Utility Navigation */
+
+.usaa-globalHeader-utility {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-left: auto;
+
+}
+
+.usaa-utility-button {
+
+    background: none;
+
+    border: none;
+
+    color: var(--usaa-white);
+
+    cursor: pointer;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    padding: 8px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    transition: opacity 0.2s ease;
+
+}
+
+.usaa-utility-button:hover {
+
+    opacity: 0.8;
+
+}
+
+.usaa-utility-button span {
+
+    display: none;
+
+}
+
+@media (min-width: 768px) {
+
+    .usaa-utility-button span {
+
+        display: inline;
+
+    }
+
+}
+
+.usaa-logon-button {
+
+    background: none;
+
+    border: 2px solid var(--usaa-white);
+
+    border-radius: 4px;
+
+    color: var(--usaa-white);
+
+    cursor: pointer;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    padding: 6px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    transition: background-color 0.2s ease;
+
+    text-decoration: none;
+
+}
+
+.usaa-logon-button:hover {
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+/* ============================================
+
+   QUICK LINKS IN HEADER
+
+   ============================================ */
+
+.quick-links {
+
+    background: transparent;
+
+    padding: 79.2px 0 12px 0;
+
+    margin-top: 0;
+
+}
+
+.quick-links-header {
+
+    background: #1a4a6f;
+
+    border-top: 1px solid #5a7a95;
+
+    padding: 12px 0;
+
+}
+
+.quick-links-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 16px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 32px;
+
+    flex-wrap: wrap;
+
+}
+
+@media (min-width: 768px) {
+
+    .quick-links-container {
+
+        padding: 0 24px;
+
+    }
+
+}
+
+.quick-link {
+
+    color: var(--usaa-navy);
+
+    text-decoration: none;
+
+    font-size: 0.875rem;
+
+    font-weight: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: opacity 0.2s ease;
+
+}
+
+.quick-link:hover {
+
+    opacity: 0.8;
+
+}
+
+.quick-link img {
+
+    filter: none;
+
+    width: 24px;
+
+    height: 24px;
+
+    flex-shrink: 0;
+
+}
+
+/* ============================================
+
+   MAIN CONTENT
+
+   ============================================ */
+
+.pageContent {
+
+    flex: 1 0 auto;
+
+    background: var(--usaa-white);
+
+    margin-top: 0;
+
+}
+
+/* ============================================
+
+   LAYOUT CONTAINERS
+
+   ============================================ */
+
+.rds-layout__container {
+
+    box-sizing: border-box;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+    max-width: 1200px;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-layout__container {
+
+        padding-left: 24px;
+
+        padding-right: 24px;
+
+    }
+
+}
+
+.rds-layout--top-6 {
+
+    margin-top: 48px;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-layout--top-6 {
+
+        margin-top: 64px;
+
+    }
+
+}
+
+.rds-layout--top-2 {
+
+    margin-top: -80px;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-layout--top-2 {
+
+        margin-top: -72px;
+
+    }
+
+}
+
+.rds-layout--bottom-6 {
+
+    margin-bottom: 48px;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-layout--bottom-6 {
+
+        margin-bottom: 64px;
+
+    }
+
+}
+
+/* ============================================
+
+   TYPOGRAPHY - EXACT FROM USAA RDS
+
+   ============================================ */
+
+.rds-typography__headline-1 {
+
+    background: none;
+
+    color: var(--usaa-navy);
+
+    float: none;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 2.25rem;
+
+    font-weight: 700;
+
+    line-height: 2.5rem;
+
+    margin: 32px 0 16px;
+
+    min-height: auto;
+
+    padding-left: 0;
+
+    text-align: left;
+
+    width: auto;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-typography__headline-1 {
+
+        font-size: 2.5rem;
+
+        line-height: 2.75rem;
+
+        margin-bottom: 24px;
+
+        margin-top: 48px;
+
+    }
+
+}
+
+.rds-typography__headline-2 {
+
+    background: none;
+
+    color: var(--usaa-navy);
+
+    float: none;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    line-height: 1.75rem;
+
+    margin: 48px 0 8px;
+
+    min-height: auto;
+
+    padding-left: 0;
+
+    text-align: left;
+
+    width: auto;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-typography__headline-2 {
+
+        font-size: 1.75rem;
+
+        line-height: 2rem;
+
+        margin-bottom: 16px;
+
+        margin-top: 64px;
+
+    }
+
+}
+
+.headline-2-to-1 {
+
+    font-size: 1.75rem;
+
+    font-weight: 700;
+
+    line-height: 2rem;
+
+    margin-bottom: 16px;
+
+    margin-top: 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .headline-2-to-1 {
+
+        margin-bottom: 32px;
+
+    }
+
+}
+
+.rds-typography__headline-3 {
+
+    background: none;
+
+    color: var(--usaa-navy);
+
+    float: none;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    line-height: 1.5rem;
+
+    margin: 48px 0 8px;
+
+    min-height: auto;
+
+    padding-left: 0;
+
+    text-align: left;
+
+    width: auto;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-typography__headline-3 {
+
+        font-size: 1.5rem;
+
+        line-height: 1.75rem;
+
+        margin-bottom: 16px;
+
+        margin-top: 64px;
+
+    }
+
+}
+
+.rds-typography__headline-4 {
+
+    background: none;
+
+    color: var(--usaa-navy);
+
+    float: none;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 500;
+
+    line-height: 1.5rem;
+
+    margin: 32px 0 8px;
+
+    min-height: auto;
+
+    padding-left: 0;
+
+    text-align: left;
+
+    width: auto;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-typography__headline-4 {
+
+        margin-bottom: 16px;
+
+        margin-top: 48px;
+
+    }
+
+}
+
+.rds-typography__paragraph {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    line-height: 1.5rem;
+
+    margin-bottom: 8px;
+
+    margin-top: 8px;
+
+    padding-bottom: 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-typography__paragraph {
+
+        margin-bottom: 16px;
+
+        margin-top: 16px;
+
+    }
+
+}
+
+.rds-typography__paragraph-small {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 0.875rem;
+
+    font-weight: 400;
+
+    line-height: 1.25rem;
+
+    margin-bottom: 8px;
+
+    margin-top: 8px;
+
+}
+
+.rds-typography__text-link {
+
+    background: none;
+
+    border: 0;
+
+    cursor: pointer;
+
+    color: var(--usaa-link-blue);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: inherit;
+
+    font-weight: inherit;
+
+    text-decoration: underline;
+
+}
+
+.rds-typography__text-link:visited {
+
+    color: var(--usaa-navy);
+
+}
+
+.rds-typography__text-link:hover,
+
+.rds-typography__text-link:focus {
+
+    color: var(--usaa-link-hover);
+
+}
+
+.rds-typography__list {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    line-height: 1.5rem;
+
+    list-style: none;
+
+    margin: 8px 0;
+
+    padding-left: 1rem;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-typography__list {
+
+        margin-bottom: 16px;
+
+        margin-top: 16px;
+
+    }
+
+}
+
+.rds-typography__list li {
+
+    margin-bottom: 8px;
+
+    margin-top: 8px;
+
+}
+
+.rds-typography__list--checkmark {
+
+    list-style: none;
+
+    padding-left: 0;
+
+}
+
+.rds-typography__list--checkmark li {
+
+    padding-left: 28px;
+
+    position: relative;
+
+}
+
+.rds-typography__list--checkmark li:before {
+
+    content: "\2713";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--usaa-link-blue);
+
+    font-weight: 700;
+
+    font-size: 1.2em;
+
+}
+
+/* ============================================
+
+   HERO SECTION
+
+   ============================================ */
+
+.hero-section {
+
+    background: #e6f2fa;
+
+    padding: 32px 0;
+
+    width: 100%;
+
+    margin-top: -76.8px;
+
+}
+
+@media (min-width: 768px) {
+
+    .hero-section {
+
+        padding: 48px 0;
+
+        margin-top: -76.8px;
+
+    }
+
+}
+
+.hero-content {
+
+    padding: 32px 0 24px;
+
+    margin-top: -48px;
+
+}
+
+@media (min-width: 768px) {
+
+    .hero-content {
+
+        padding: 48px 0 32px;
+
+        margin-top: -48px;
+
+    }
+
+}
+
+/* ============================================
+
+   SERVICE TILES GRID
+
+   ============================================ */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 48px;
+
+}
+
+@media (min-width: 576px) {
+
+    .services-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .services-grid {
+
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 24px;
+
+        margin-bottom: 64px;
+
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .services-grid {
+
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 24px;
+
+    }
+
+}
+
+.service-tile {
+
+    background: var(--usaa-white);
+
+    border: 1px solid var(--usaa-border-gray);
+
+    border-radius: 4px;
+
+    padding: 24px 16px;
+
+    text-decoration: none;
+
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+
+}
+
+.service-tile:hover {
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transform: translateY(-2px);
+
+}
+
+.service-tile-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+}
+
+.service-tile-icon img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.service-tile-title {
+
+    color: var(--usaa-link-blue);
+
+    font-size: 1.125rem;
+
+    font-weight: 700;
+
+    line-height: 1.5rem;
+
+    margin: 0;
+
+    flex: 1;
+
+    text-align: left;
+
+    width: 100%;
+
+}
+
+.service-tile-arrow {
+
+    color: var(--usaa-link-blue);
+
+    font-size: 1.5rem;
+
+    line-height: 1;
+
+    display: inline;
+
+    margin-left: 4px;
+
+}
+
+/* ============================================
+
+   BACKGROUND SECTIONS
+
+   ============================================ */
+
+.rds-globals__background-secondary {
+
+    background: var(--usaa-white);
+
+    padding: 48px 0;
+
+    margin-top: 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .rds-globals__background-secondary {
+
+        padding: 64px 0;
+
+    }
+
+}
+
+.membership-eligibility-blue {
+
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+
+    padding: 48px 24px;
+
+    margin-top: 0;
+
+    color: var(--usaa-white);
+
+    overflow: hidden;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-eligibility-blue {
+
+        padding: 64px 48px;
+
+    }
+
+}
+
+.membership-eligibility-blue h2 {
+
+    color: var(--usaa-white);
+
+    text-align: left;
+
+    margin-bottom: 24px;
+
+    word-wrap: break-word;
+
+    overflow-wrap: break-word;
+
+}
+
+.eligibility-headline-large {
+
+    font-size: 2rem;
+
+    line-height: 2.5rem;
+
+}
+
+@media (min-width: 768px) {
+
+    .eligibility-headline-large {
+
+        font-size: 2.5rem;
+
+        line-height: 3rem;
+
+    }
+
+}
+
+.membership-eligibility-blue .rds-typography__list {
+
+    color: var(--usaa-white);
+
+}
+
+.membership-eligibility-blue .rds-typography__list--checkmark li:before {
+
+    color: var(--usaa-white);
+
+}
+
+.membership-eligibility-blue .eligibility-right .rds-typography__list {
+
+    margin: 0;
+
+    padding-left: 0;
+
+    word-wrap: break-word;
+
+    overflow-wrap: break-word;
+
+}
+
+.membership-eligibility-blue .rds-typography__list li {
+
+    word-wrap: break-word;
+
+    overflow-wrap: break-word;
+
+    margin-bottom: 6px;
+
+}
+
+.eligibility-bullet-list {
+
+    list-style-type: disc;
+
+    padding-left: 24px;
+
+}
+
+.eligibility-bullet-list li {
+
+    list-style-type: disc;
+
+    padding-left: 8px;
+
+    margin-bottom: 6px;
+
+}
+
+.membership-eligibility-blue .eligibility-bullet-list li {
+
+    color: var(--usaa-white);
+
+}
+
+.membership-eligibility-blue .eligibility-bullet-list li::marker {
+
+    color: var(--usaa-white);
+
+}
+
+/* ============================================
+
+   FEATURED CONTENT GRID
+
+   ============================================ */
+
+.featured-content-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+}
+
+@media (min-width: 768px) {
+
+    .featured-content-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 24px;
+
+    }
+
+}
+
+.featured-content-grid-large {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    margin-bottom: 48px;
+
+}
+
+@media (min-width: 768px) {
+
+    .featured-content-grid-large {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 32px;
+
+    }
+
+}
+
+.featured-content-single {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+}
+
+@media (min-width: 768px) {
+
+    .featured-content-single {
+
+        max-width: 800px;
+
+        margin: 0 auto;
+
+    }
+
+}
+
+.fullwidth-image-section {
+
+    width: 100%;
+
+    padding: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    height: 100vh;
+
+    position: relative;
+
+}
+
+.fullwidth-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+.fullwidth-image-section .rds-layout__container {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+@media (min-width: 768px) {
+
+    .fullwidth-image-section .rds-layout__container {
+
+        padding-left: 24px;
+
+        padding-right: 24px;
+
+    }
+
+}
+
+.fullwidth-image-content-overlay {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    max-width: 600px;
+
+}
+
+.fullwidth-image-content-box {
+
+    background: var(--usaa-white);
+
+    padding: 48px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+@media (min-width: 768px) {
+
+    .fullwidth-image-content-box {
+
+        padding: 64px;
+
+    }
+
+}
+
+.fullwidth-image-content-box h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 32px;
+
+    text-align: left;
+
+}
+
+.features-list-overlay {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+}
+
+.feature-item-overlay {
+
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 24px;
+
+    align-items: flex-start;
+
+}
+
+.feature-icon-overlay {
+
+    width: 80px;
+
+    height: 80px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.feature-icon-overlay img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.feature-item-overlay-content {
+
+    flex: 1;
+
+}
+
+.feature-item-overlay h3 {
+
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+}
+
+.feature-item-overlay p {
+
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+}
+
+.featured-item--large {
+
+    min-height: 500px;
+
+}
+
+@media (min-width: 768px) {
+
+    .featured-item--large {
+
+        min-height: 600px;
+
+    }
+
+}
+
+.featured-item--large .featured-item-image {
+
+    height: 300px;
+
+}
+
+@media (min-width: 768px) {
+
+    .featured-item--large .featured-item-image {
+
+        height: 400px;
+
+    }
+
+}
+
+.featured-item--large .featured-item-content {
+
+    padding: 32px;
+
+}
+
+@media (min-width: 768px) {
+
+    .featured-item--large .featured-item-content {
+
+        padding: 48px;
+
+    }
+
+}
+
+.featured-item--large h3 {
+
+    font-size: 1.5rem;
+
+    line-height: 1.75rem;
+
+}
+
+@media (min-width: 768px) {
+
+    .featured-item--large h3 {
+
+        font-size: 1.75rem;
+
+        line-height: 2rem;
+
+    }
+
+}
+
+/* ============================================
+
+   CREDIT CARD PROMOTION
+
+   ============================================ */
+
+.credit-card-promo {
+
+    background: var(--usaa-white);
+
+    padding: 48px 0;
+
+    margin-bottom: 48px;
+
+}
+
+@media (min-width: 768px) {
+
+    .credit-card-promo {
+
+        padding: 64px 0;
+
+        margin-bottom: 64px;
+
+    }
+
+}
+
+.credit-card-promo-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    align-items: center;
+
+}
+
+@media (min-width: 768px) {
+
+    .credit-card-promo-content {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 64px;
+
+    }
+
+}
+
+.credit-card-promo-text {
+
+    text-align: left;
+
+}
+
+.credit-card-label {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 0.875rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+
+}
+
+.credit-card-subtitle {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 0.875rem;
+
+    font-weight: 500;
+
+    margin-bottom: 24px;
+
+}
+
+.credit-card-offer {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    line-height: 1.75rem;
+
+    margin: 0 0 32px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .credit-card-offer {
+
+        font-size: 1.75rem;
+
+        line-height: 2rem;
+
+    }
+
+}
+
+.credit-card-cta {
+
+    margin-top: 24px;
+
+}
+
+.credit-card-promo-graphic {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.credit-card-circle {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 2px solid #e0e0e0;
+
+    background: #f8f8f8;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+@media (min-width: 768px) {
+
+    .credit-card-circle {
+
+        width: 400px;
+
+        height: 400px;
+
+    }
+
+}
+
+.credit-card-stack {
+
+    position: relative;
+
+    width: 200px;
+
+    height: 120px;
+
+}
+
+.credit-card-front {
+
+    position: absolute;
+
+    width: 200px;
+
+    height: 120px;
+
+    background: var(--usaa-white);
+
+    border: 2px solid var(--usaa-navy);
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.credit-card-front::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    width: 24px;
+
+    height: 24px;
+
+    background: var(--usaa-link-blue);
+
+    border-radius: 4px;
+
+}
+
+.credit-card-front::after {
+
+    content: '';
+
+    position: absolute;
+
+    top: 44px;
+
+    left: 12px;
+
+    width: 120px;
+
+    height: 8px;
+
+    background: repeating-linear-gradient(
+
+        to right,
+
+        var(--usaa-link-blue) 0px,
+
+        var(--usaa-link-blue) 8px,
+
+        transparent 8px,
+
+        transparent 16px
+
+    );
+
+}
+
+.credit-card-back {
+
+    position: absolute;
+
+    top: 8px;
+
+    left: 16px;
+
+    width: 200px;
+
+    height: 120px;
+
+    background: var(--usaa-link-blue);
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    z-index: -1;
+
+}
+
+.credit-card-checkmark {
+
+    position: absolute;
+
+    top: -20px;
+
+    right: -20px;
+
+    z-index: 2;
+
+}
+
+@media (min-width: 768px) {
+
+    .credit-card-checkmark {
+
+        top: -30px;
+
+        right: -30px;
+
+    }
+
+}
+
+.featured-item {
+
+    background: var(--usaa-white);
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+}
+
+.featured-item-image {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+}
+
+.featured-item-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.featured-item-content {
+
+    padding: 24px;
+
+}
+
+.featured-item-content h3 {
+
+    margin-top: 0;
+
+}
+
+.featured-item-actions {
+
+    display: flex;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    margin-top: 16px;
+
+}
+
+/* ============================================
+
+   FEATURES GRID
+
+   ============================================ */
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    margin-top: 32px;
+
+}
+
+@media (min-width: 768px) {
+
+    .features-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 48px;
+
+        margin-top: 48px;
+
+    }
+
+}
+
+.feature-card {
+
+    text-align: center;
+
+}
+
+.feature-icon {
+
+    margin: 0 auto 24px;
+
+    width: 120px;
+
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.feature-icon img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.feature-card h3 {
+
+    margin-top: 0;
+
+}
+
+/* ============================================
+
+   ELIGIBILITY GRID
+
+   ============================================ */
+
+.eligibility-layout {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 32px;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 96px;
+
+}
+
+@media (min-width: 768px) {
+
+    .eligibility-layout {
+
+        margin-top: 96px;
+
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .eligibility-layout {
+
+        flex-direction: row;
+
+        align-items: flex-start;
+
+        gap: 48px;
+
+    }
+
+}
+
+.eligibility-left {
+
+    flex: 1;
+
+    min-width: 0;
+
+    max-width: 100%;
+
+}
+
+.eligibility-right {
+
+    flex: 1;
+
+    min-width: 0;
+
+    max-width: 100%;
+
+}
+
+.eligibility-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    margin: 32px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .eligibility-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 48px;
+
+    }
+
+}
+
+/* ============================================
+
+   MEMBERSHIP CTA
+
+   ============================================ */
+
+.membership-cta {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    margin-top: 32px;
+
+}
+
+.membership-eligibility-blue .membership-cta {
+
+    justify-content: flex-start;
+
+    margin-top: 24px;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 24px;
+
+}
+
+.membership-join-button-white {
+
+    background-color: var(--usaa-white) !important;
+
+    border-color: var(--usaa-white) !important;
+
+    color: var(--usaa-navy) !important;
+
+}
+
+.membership-join-button-white:hover {
+
+    background-color: rgba(255, 255, 255, 0.9) !important;
+
+    border-color: var(--usaa-white) !important;
+
+    color: var(--usaa-navy) !important;
+
+}
+
+.membership-learn-more-link {
+
+    color: var(--usaa-white) !important;
+
+    text-decoration: none;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    border: none !important;
+
+    background: none !important;
+
+    padding: 0;
+
+    cursor: pointer;
+
+}
+
+.membership-learn-more-link:hover {
+
+    color: rgba(255, 255, 255, 0.8) !important;
+
+    text-decoration: underline;
+
+}
+
+.membership-arrow {
+
+    font-size: 1.2em;
+
+    line-height: 1;
+
+}
+
+/* ============================================
+
+   BUTTONS - EXACT FROM USAA RDS
+
+   ============================================ */
+
+.rds-button__primary,
+
+.rds-button__secondary {
+
+    background: none;
+
+    border: 1px solid transparent;
+
+    border-radius: 4px;
+
+    color: var(--usaa-navy);
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    line-height: 1.5rem;
+
+    padding: 11px 24px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+
+    position: relative;
+
+}
+
+.rds-button__primary {
+
+    background-color: var(--usaa-link-blue);
+
+    border-color: var(--usaa-link-blue);
+
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+    color: var(--usaa-white);
+
+}
+
+.rds-button__primary:visited {
+
+    color: var(--usaa-white);
+
+}
+
+.rds-button__primary:hover {
+
+    background-color: var(--usaa-link-hover);
+
+    border-color: var(--usaa-link-hover);
+
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+    color: var(--usaa-white);
+
+}
+
+.rds-button__secondary {
+
+    background-color: transparent;
+
+    border-color: var(--usaa-link-blue);
+
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+    color: var(--usaa-link-blue);
+
+}
+
+.rds-button__secondary:visited {
+
+    color: var(--usaa-link-blue);
+
+}
+
+.rds-button__secondary:hover {
+
+    border-color: var(--usaa-link-hover);
+
+    color: var(--usaa-link-hover);
+
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+/* ============================================
+
+   MOBILE APP SECTION
+
+   ============================================ */
+
+.mobile-app-section-wrapper {
+
+    background: var(--usaa-white);
+
+    padding: 48px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .mobile-app-section-wrapper {
+
+        padding: 64px 0;
+
+    }
+
+}
+
+.mobile-app-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    align-items: center;
+
+}
+
+@media (min-width: 768px) {
+
+    .mobile-app-section {
+
+        grid-template-columns: 1fr 2fr;
+
+        gap: 48px;
+
+    }
+
+}
+
+.mobile-app-content h2 {
+
+    margin-top: 0;
+
+    font-size: 1.75rem;
+
+    line-height: 2rem;
+
+}
+
+@media (min-width: 768px) {
+
+    .mobile-app-content h2 {
+
+        font-size: 2.25rem;
+
+        line-height: 2.5rem;
+
+    }
+
+}
+
+.app-badges {
+
+    display: flex;
+
+    gap: 16px;
+
+    margin: 24px 0;
+
+    flex-wrap: wrap;
+
+}
+
+.app-badges a {
+
+    display: block;
+
+}
+
+.qr-code {
+
+    margin-top: 24px;
+
+}
+
+.qr-code p {
+
+    margin-bottom: 8px;
+
+}
+
+.mobile-app-image {
+
+    text-align: center;
+
+}
+
+.mobile-app-image img {
+
+    max-width: 300px;
+
+}
+
+/* ============================================
+
+   HOW CAN WE HELP YOU SECTION
+
+   ============================================ */
+
+.help-section {
+
+    background: #f8f9fa;
+
+    width: 100%;
+
+    padding: 48px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .help-section {
+
+        padding: 64px 0;
+
+    }
+
+}
+
+.help-section-title {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.75rem;
+
+    font-weight: 700;
+
+    line-height: 2rem;
+
+    text-align: center;
+
+    margin: 0 0 32px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .help-section-title {
+
+        font-size: 2rem;
+
+        line-height: 2.25rem;
+
+        margin-bottom: 48px;
+
+    }
+
+}
+
+.help-cards-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+}
+
+@media (min-width: 576px) {
+
+    .help-cards-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .help-cards-grid {
+
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 24px;
+
+    }
+
+}
+
+.help-card {
+
+    background: var(--usaa-white);
+
+    border: 1px solid var(--usaa-border-gray);
+
+    border-radius: 4px;
+
+    padding: 24px 16px;
+
+    text-decoration: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+}
+
+.help-card:hover {
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transform: translateY(-2px);
+
+}
+
+.help-card-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.help-card-icon img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    filter: none !important;
+
+}
+
+.help-card-icon {
+
+    filter: none !important;
+
+}
+
+.help-card-text {
+
+    color: var(--usaa-link-blue);
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    line-height: 1.5rem;
+
+    margin-bottom: 8px;
+
+    flex: 1;
+
+}
+
+.help-card-arrow {
+
+    color: var(--usaa-link-blue);
+
+    font-size: 1.5rem;
+
+    line-height: 1;
+
+    margin-top: auto;
+
+}
+
+/* ============================================
+
+   FOOTER
+
+   ============================================ */
+
+.pageFooter {
+
+    background: var(--usaa-white);
+
+    padding: 48px 0 32px;
+
+    margin-top: 64px;
+
+}
+
+.footer-products-headline {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: var(--usaa-navy);
+
+    margin-bottom: 32px;
+
+    text-align: left;
+
+}
+
+@media (min-width: 768px) {
+
+    .footer-products-headline {
+
+        font-size: 2.25rem;
+
+    }
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    margin-bottom: 48px;
+
+}
+
+@media (min-width: 576px) {
+
+    .footer-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .footer-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .footer-grid {
+
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
+}
+
+.footer-column {
+
+    font-size: 0.875rem;
+
+}
+
+.footer-heading {
+
+    color: var(--usaa-navy);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    margin-bottom: 16px;
+
+    margin-top: 0;
+
+}
+
+.footer-list {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.footer-list li {
+
+    margin-bottom: 8px;
+
+}
+
+.footer-list a {
+
+    color: var(--usaa-link-blue);
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+}
+
+.footer-list a:hover {
+
+    color: var(--usaa-link-hover);
+
+    text-decoration: underline;
+
+}
+
+/* Footer Bottom */
+
+.footer-bottom {
+
+    border-top: 1px solid var(--usaa-border-gray);
+
+    padding-top: 24px;
+
+}
+
+.footer-top-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 32px;
+
+    margin-bottom: 24px;
+
+    width: 100%;
+
+}
+
+.footer-social {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+    order: 2;
+
+}
+
+.footer-social a {
+
+    display: block;
+
+    transition: opacity 0.2s ease;
+
+}
+
+.footer-social a:hover {
+
+    opacity: 0.7;
+
+}
+
+.footer-links-row {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    flex: 1;
+
+    justify-content: flex-start;
+
+    font-size: 1rem;
+
+    order: 1;
+
+}
+
+.footer-links-row a {
+
+    color: var(--usaa-text-secondary);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+.footer-links-row a:hover {
+
+    text-decoration: underline;
+
+    color: var(--usaa-link-blue);
+
+}
+
+.footer-legal {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    justify-content: flex-start;
+
+    margin-bottom: 16px;
+
+    font-size: 0.875rem;
+
+    color: var(--usaa-text-secondary);
+
+}
+
+.footer-legal a {
+
+    color: var(--usaa-text-secondary);
+
+    text-decoration: none;
+
+}
+
+.footer-legal a:hover {
+
+    text-decoration: underline;
+
+    color: var(--usaa-link-blue);
+
+}
+
+.footer-separator {
+
+    color: var(--usaa-text-secondary);
+
+}
+
+@media (max-width: 767px) {
+
+    .footer-top-row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 16px;
+
+    }
+
+    .footer-links-row {
+
+        width: 100%;
+
+        order: 1;
+
+    }
+
+    .footer-social {
+
+        order: 2;
+
+        align-self: flex-end;
+
+    }
+
+}
+
+.footer-copyright {
+
+    width: 100%;
+
+    margin-top: 16px;
+
+    color: var(--usaa-text-secondary);
+
+    font-size: 0.875rem;
+
+}
+
+.footer-copyright p {
+
+    margin: 0;
+
+}
+
+.footer-copyright p {
+
+    margin: 0;
+
+}
+
+/* ============================================
+
+   FOOTER LEGAL CONTENT
+
+   ============================================ */
+
+.footer-legal-content {
+
+    margin-top: 48px;
+
+    padding-top: 32px;
+
+    border-top: 1px solid var(--usaa-border-gray);
+
+    font-size: 0.7rem;
+
+    line-height: 1.4;
+
+    color: var(--usaa-text-secondary);
+
+}
+
+.footer-legal-text {
+
+    margin: 0 0 12px 0;
+
+    font-size: 0.7rem;
+
+    line-height: 1.5;
+
+    color: var(--usaa-text-secondary);
+
+}
+
+.footer-legal-list {
+
+    margin: 8px 0 12px 20px;
+
+    padding: 0;
+
+    list-style-type: disc;
+
+    font-size: 0.7rem;
+
+    line-height: 1.5;
+
+    color: var(--usaa-text-secondary);
+
+}
+
+.footer-legal-list li {
+
+    margin-bottom: 6px;
+
+}
+
+.footer-legal-link {
+
+    color: var(--usaa-link-blue);
+
+    text-decoration: underline;
+
+}
+
+.footer-legal-link:hover {
+
+    color: var(--usaa-link-hover);
+
+}
+
+.footer-legal-id {
+
+    margin-top: 24px;
+
+    font-size: 0.65rem;
+
+    opacity: 0.7;
+
+}
+
+.footer-equal-housing-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+}
+
+.footer-equal-housing-logo {
+
+    height: 32px;
+
+    width: auto;
+
+    display: inline-block;
+
+}
+
+@media (min-width: 768px) {
+
+    .footer-legal-content {
+
+        font-size: 0.75rem;
+
+    }
+
+    .footer-legal-text {
+
+        font-size: 0.75rem;
+
+    }
+
+    .footer-legal-list {
+
+        font-size: 0.75rem;
+
+    }
+
+}
+
+/* ============================================
+
+   PROMO BANNERS
+
+   ============================================ */
+
+.promo-banner {
+
+    padding: 64px 0;
+
+    text-align: left;
+
+}
+
+@media (min-width: 768px) {
+
+    .promo-banner {
+
+        padding: 80px 0;
+
+    }
+
+}
+
+.promo-banner--medicare {
+
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+
+    color: var(--usaa-white);
+
+}
+
+.promo-banner-wrapper {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 32px;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+}
+
+@media (min-width: 768px) {
+
+    .promo-banner-wrapper {
+
+        align-items: center;
+
+        gap: 48px;
+
+    }
+
+}
+
+.promo-banner-content {
+
+    max-width: 800px;
+
+    margin: 0;
+
+    text-align: left;
+
+    flex: 1;
+
+    min-width: 300px;
+
+}
+
+.promo-banner-button-wrapper {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.membership-promo-box {
+
+    background: var(--usaa-white);
+
+    padding: 48px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    max-width: 600px;
+
+    text-align: left;
+
+    width: 100%;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-promo-box {
+
+        padding: 64px;
+
+    }
+
+}
+
+.membership-promo-label {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 0.875rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 16px;
+
+    text-transform: uppercase;
+
+}
+
+.membership-promo-headline {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    line-height: 2.25rem;
+
+    margin: 0 0 24px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-promo-headline {
+
+        font-size: 2.5rem;
+
+        line-height: 2.75rem;
+
+    }
+
+}
+
+.membership-promo-text {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.5rem;
+
+    margin: 0 0 32px 0;
+
+}
+
+.membership-promo-button {
+
+    margin-top: 0;
+
+}
+
+.promo-banner-image-section {
+
+    padding: 0;
+
+    margin: 0;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.promo-banner-large-image {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    max-width: 100%;
+
+    object-fit: cover;
+
+}
+
+.promo-banner-image-overlay {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 240px;
+
+    width: calc(60% - 288px);
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 16px;
+
+    padding-right: 48px;
+
+    padding-top: 48px;
+
+    padding-bottom: 48px;
+
+}
+
+    @media (min-width: 768px) {
+
+        .promo-banner-image-overlay {
+
+            left: 240px;
+
+            padding-left: 24px;
+
+            width: calc(50% - 288px);
+
+            padding-right: 64px;
+
+            padding-top: 64px;
+
+            padding-bottom: 64px;
+
+        }
+
+    }
+
+.promo-banner-image-content {
+
+    background: var(--usaa-white);
+
+    padding: 144px 48px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    width: 100%;
+
+}
+
+@media (min-width: 768px) {
+
+    .promo-banner-image-content {
+
+        padding: 160px 64px;
+
+    }
+
+}
+
+.promo-banner-image-title {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.75rem;
+
+    font-weight: 700;
+
+    line-height: 2rem;
+
+    margin: 0 0 16px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .promo-banner-image-title {
+
+        font-size: 2rem;
+
+        line-height: 2.25rem;
+
+    }
+
+}
+
+.promo-banner-image-text {
+
+    color: var(--usaa-navy);
+
+    font-size: 1rem;
+
+    line-height: 1.5rem;
+
+    margin: 0 0 24px 0;
+
+}
+
+.promo-banner-label {
+
+    font-size: 0.875rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 16px;
+
+    text-transform: uppercase;
+
+}
+
+.promo-banner-title {
+
+    color: var(--usaa-white);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.75rem;
+
+    font-weight: 700;
+
+    line-height: 2rem;
+
+    margin: 0 0 24px 0;
+
+}
+
+.promo-banner-title-large {
+
+    font-size: 2.25rem;
+
+    line-height: 2.5rem;
+
+}
+
+@media (min-width: 768px) {
+
+    .promo-banner-title {
+
+        font-size: 2rem;
+
+        line-height: 2.25rem;
+
+    }
+
+    .promo-banner-title-large {
+
+        font-size: 2.75rem;
+
+        line-height: 3rem;
+
+    }
+
+}
+
+.rds-button__secondary--inverse {
+
+    background-color: transparent;
+
+    border-color: var(--usaa-white);
+
+    color: var(--usaa-white) !important;
+
+}
+
+.rds-button__secondary--inverse:hover {
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    border-color: var(--usaa-white);
+
+    color: var(--usaa-white) !important;
+
+}
+
+.rds-button__secondary--inverse:visited {
+
+    color: var(--usaa-white) !important;
+
+}
+
+/* ============================================
+
+   MEMBERSHIP HERO BANNER
+
+   ============================================ */
+
+.membership-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 48px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-hero {
+
+        margin: 64px 0;
+
+    }
+
+}
+
+.membership-hero-container {
+
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    min-height: 400px;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-hero-container {
+
+        grid-template-columns: 1fr 1fr;
+
+        min-height: 500px;
+
+    }
+
+}
+
+.membership-hero-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-hero-image {
+
+        position: absolute;
+
+        top: 0;
+
+        right: 0;
+
+        width: 60%;
+
+        height: 100%;
+
+    }
+
+}
+
+.membership-hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.membership-hero-content {
+
+    background: var(--usaa-white);
+
+    padding: 32px 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-hero-content {
+
+        padding: 48px;
+
+        max-width: 500px;
+
+    }
+
+}
+
+.membership-hero-label {
+
+    color: var(--usaa-link-blue);
+
+    font-size: 0.875rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 16px;
+
+    text-transform: uppercase;
+
+}
+
+.membership-hero-title {
+
+    color: var(--usaa-navy);
+
+    font-family: 'Gotham Narrow', Arial, sans-serif;
+
+    font-size: 1.75rem;
+
+    font-weight: 700;
+
+    line-height: 2rem;
+
+    margin: 0 0 16px 0;
+
+}
+
+@media (min-width: 768px) {
+
+    .membership-hero-title {
+
+        font-size: 2rem;
+
+        line-height: 2.25rem;
+
+    }
+
+}
+
+.membership-hero-text {
+
+    color: var(--usaa-navy);
+
+    font-size: 1rem;
+
+    line-height: 1.5rem;
+
+    margin: 0 0 24px 0;
+
+}
+
+/* ============================================
+
+   RESPONSIVE ADJUSTMENTS
+
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    .service-tile-title {
+
+        font-size: 0.875rem;
+
+    }
+
+    
+
+    .service-tile-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+    .promo-banner {
+
+        padding: 32px 0;
+
+    }
+
+    
+
+    .promo-banner-title {
+
+        font-size: 1.5rem;
+
+        line-height: 1.75rem;
+
+    }
+
+    
+
+    .membership-hero-content {
+
+        padding: 24px 16px;
+
+    }
+
+}
+
+@media print {
+
+    .usaa-globalHeader,
+
+    .quick-links,
+
+    .pageFooter {
+
+        display: none;
+
+    }
+
+}
+
