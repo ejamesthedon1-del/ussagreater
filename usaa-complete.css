@@ -3694,6 +3694,28 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .promo-banner-image-overlay {
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 24px 16px;
+
+        align-items: flex-start;
+
+    }
+
+}
+
     @media (min-width: 768px) {
 
         .promo-banner-image-overlay {
@@ -3725,6 +3747,16 @@ img {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
     width: 100%;
+
+}
+
+@media (max-width: 767px) {
+
+    .promo-banner-image-content {
+
+        padding: 32px 24px;
+
+    }
 
 }
 
