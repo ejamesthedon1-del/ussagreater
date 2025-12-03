@@ -2304,6 +2304,22 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .credit-card-checkmark {
+
+        display: none;
+
+    }
+
+    .credit-card-label {
+
+        font-weight: 900;
+
+    }
+
+}
+
 @media (min-width: 768px) {
 
     .credit-card-checkmark {
