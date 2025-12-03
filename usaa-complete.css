@@ -3646,8 +3646,6 @@ img {
 
         align-items: center;
 
-        justify-content: space-between;
-
         gap: 12px;
 
         user-select: none;
@@ -3706,9 +3704,9 @@ img {
 
         display: inline-block;
 
-        order: 2;
+        order: -1;
 
-        margin-left: auto;
+        flex-shrink: 0;
 
     }
 
