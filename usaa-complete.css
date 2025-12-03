@@ -3068,6 +3068,14 @@ img {
 
         text-align: center;
 
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
     }
 
     .mobile-app-section {
@@ -3076,6 +3084,16 @@ img {
 
         text-align: center;
 
+        width: 100%;
+
+        max-width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
     }
 
     .mobile-app-content {
@@ -3083,6 +3101,46 @@ img {
         text-align: center;
 
         max-width: 100%;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .mobile-app-content h2 {
+
+        text-align: center;
+
+    }
+
+    .mobile-app-content ul {
+
+        text-align: left;
+
+        display: inline-block;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    .app-badges {
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
+    .qr-code {
+
+        text-align: center;
 
     }
 
