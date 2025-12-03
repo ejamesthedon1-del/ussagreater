@@ -260,7 +260,7 @@ html { background: rgb(236, 236, 235); }
   svg#flourish-icon { display: none !important; }
   
   /* Wrapper adjustments - remove ALL container constraints to allow full width */
-  .miam-logon-wrapper { margin: 0 !important; padding: 0 !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; min-height: calc(100vh - 200px) !important; width: 100% !important; max-width: none !important; padding-top: calc(1in - 96px) !important; box-sizing: border-box !important; }
+  .miam-logon-wrapper { margin: 0 !important; padding: 0 !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; min-height: calc(100vh - 200px) !important; width: 100% !important; max-width: none !important; padding-top: calc(1in - 96px + 48px) !important; box-sizing: border-box !important; }
   .miam-logon-gutter { display: none !important; }
   .logon-wrapper-main-contain { margin: 0 !important; padding: 0 !important; max-width: none !important; width: 100% !important; display: flex !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; margin-top: calc(-1in + 24px + 48px) !important; box-sizing: border-box !important; }
   
@@ -329,7 +329,7 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-mobile-modal { display: none !important; }
   
   /* Wrapper adjustments - remove ALL container constraints to allow full width */
-  .miam-logon-wrapper { margin: 0 !important; padding: 0 !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; min-height: calc(100vh - 200px) !important; width: 100% !important; max-width: none !important; padding-top: calc(1in - 96px) !important; box-sizing: border-box !important; }
+  .miam-logon-wrapper { margin: 0 !important; padding: 0 !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; min-height: calc(100vh - 200px) !important; width: 100% !important; max-width: none !important; padding-top: calc(1in - 96px + 48px) !important; box-sizing: border-box !important; }
   .miam-logon-gutter { display: none !important; }
   .logon-wrapper-main-contain { margin: 0 !important; padding: 0 !important; max-width: none !important; width: 100% !important; display: flex !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; margin-top: calc(-1in + 24px + 48px) !important; box-sizing: border-box !important; }
   
