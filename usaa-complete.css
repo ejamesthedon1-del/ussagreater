@@ -1830,6 +1830,44 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .fullwidth-image-section {
+
+        height: auto;
+
+    }
+
+    .fullwidth-image {
+
+        height: auto;
+
+        max-height: 400px;
+
+        object-fit: cover;
+
+    }
+
+    .fullwidth-image-section .rds-layout__container {
+
+        position: static;
+
+        padding: 24px 16px;
+
+        display: block;
+
+    }
+
+    .fullwidth-image-content-overlay {
+
+        max-width: 100%;
+
+        margin-top: 0;
+
+    }
+
+}
+
 @media (min-width: 768px) {
 
     .fullwidth-image-section .rds-layout__container {
