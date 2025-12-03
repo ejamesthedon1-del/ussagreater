@@ -2034,6 +2034,14 @@ img {
 
     }
 
+    .featured-item-content .rds-button__primary {
+
+        width: 100%;
+
+        display: block;
+
+    }
+
 }
 
 @media (min-width: 768px) {
