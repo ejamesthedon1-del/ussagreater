@@ -1996,6 +1996,30 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .feature-item-overlay {
+
+        align-items: flex-start;
+
+        justify-content: flex-start;
+
+    }
+
+    .feature-item-overlay-content {
+
+        text-align: left;
+
+    }
+
+    .feature-item-overlay h3 {
+
+        text-align: left;
+
+    }
+
+}
+
 .featured-item--large {
 
     min-height: 500px;
