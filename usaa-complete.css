@@ -3450,13 +3450,15 @@ img {
 
         margin-bottom: 0;
 
+        font-weight: 600;
+
     }
 
     .help-card-arrow {
 
         margin-top: 0;
 
-        margin-left: auto;
+        margin-left: 8px;
 
         font-size: 1.25rem;
 
