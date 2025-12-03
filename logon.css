@@ -271,18 +271,18 @@ html { background: rgb(236, 236, 235); }
   .usaa-form-v5-10-1-textInput { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box !important; }
   .usaa-form-v5-10-1-block { width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
   .usaa-form-v5-10-1-fieldWrapper { width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  /* Complete border for input field - full width, no container constraints */
-  .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  .online-id .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
+  /* Complete border for input field - full width with very small side spacing */
+  .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
+  .online-id .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   /* Remove only box-shadows on mobile */
-  .usaa-form-v5-10-1-formGroup { box-shadow: none !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  .miam-logon-fieldset { box-shadow: none !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  .miam-btn-next { width: 100% !important; max-width: none !important; margin: 32px 0 0 0 !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
-  .usaa-button4 { box-shadow: none !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin-left: 0 !important; margin-right: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+  .usaa-form-v5-10-1-formGroup { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
+  .miam-logon-fieldset { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
+  .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
+  .usaa-button4 { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin-left: 8px !important; margin-right: 8px !important; padding-left: 0 !important; padding-right: 0 !important; }
   .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 0 !important; }
   
-  /* Input element constraints - full width, no container constraints */
-  .usaa-input { width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
+  /* Input element constraints - full width with very small side spacing */
+  .usaa-input { width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .usaa-input input { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; margin: 0 !important; padding: 19px 16px !important; }
   .usaa-form-v5-10-1-textInput .usaa-input input { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding: 3px 15px 12px !important; }
   
@@ -340,18 +340,18 @@ html { background: rgb(236, 236, 235); }
   .usaa-form-v5-10-1-textInput { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box !important; }
   .usaa-form-v5-10-1-block { width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
   .usaa-form-v5-10-1-fieldWrapper { width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  /* Complete border for input field - full width, no container constraints */
-  .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  .online-id .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
+  /* Complete border for input field - full width with very small side spacing */
+  .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
+  .online-id .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   /* Remove only box-shadows on mobile */
-  .usaa-form-v5-10-1-formGroup { box-shadow: none !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  .miam-logon-fieldset { box-shadow: none !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
-  .miam-btn-next { width: 100% !important; max-width: none !important; margin: 32px 0 0 0 !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
-  .usaa-button4 { box-shadow: none !important; width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin-left: 0 !important; margin-right: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+  .usaa-form-v5-10-1-formGroup { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
+  .miam-logon-fieldset { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
+  .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
+  .usaa-button4 { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin-left: 8px !important; margin-right: 8px !important; padding-left: 0 !important; padding-right: 0 !important; }
   .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 0 !important; }
   
-  /* Input element constraints - full width, no container constraints */
-  .usaa-input { width: 100% !important; max-width: none !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
+  /* Input element constraints - full width with very small side spacing */
+  .usaa-input { width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .usaa-input input { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; margin: 0 !important; padding: 19px 16px !important; }
   .usaa-form-v5-10-1-textInput .usaa-input input { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding: 3px 15px 12px !important; }
   
