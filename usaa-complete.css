@@ -518,9 +518,15 @@ img {
 
     }
 
+    .usaa-globalHeader-wrapper {
+
+        padding: 12px 0;
+
+    }
+
     .usaa-globalHeader-container {
 
-        justify-content: flex-start;
+        justify-content: space-between;
 
         align-items: center;
 
@@ -546,7 +552,7 @@ img {
 
     .usaa-logo-img {
 
-        height: 60px;
+        height: 50px;
 
     }
 
@@ -560,13 +566,45 @@ img {
 
     .usaa-logon-button {
 
+        display: block;
+
+        border: none;
+
+        background: none;
+
+        padding: 0;
+
+        margin-left: auto;
+
+        position: relative;
+
+        z-index: 1;
+
+    }
+
+    .usaa-logon-button svg {
+
         display: none;
+
+    }
+
+    .usaa-logon-button span {
+
+        display: inline;
+
+        color: var(--usaa-white);
+
+        font-size: 1rem;
+
+        font-weight: 500;
 
     }
 
     .usaa-globalHeader-utility {
 
-        display: none;
+        display: flex;
+
+        margin-left: 0;
 
     }
 
@@ -1430,9 +1468,13 @@ img {
 
     .services-view-more-arrow {
 
-        font-size: 1.2em;
+        font-size: 1.5rem;
 
         line-height: 1;
+
+        transform: rotate(90deg);
+
+        display: inline-block;
 
     }
 
