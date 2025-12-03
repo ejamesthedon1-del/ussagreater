@@ -2018,6 +2018,16 @@ img {
 
     }
 
+    .feature-item-overlay p {
+
+        text-align: left;
+
+        padding-left: 104px;
+
+        margin-left: 0;
+
+    }
+
 }
 
 .featured-item--large {
