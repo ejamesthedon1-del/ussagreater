@@ -3062,6 +3062,32 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .mobile-app-section-wrapper {
+
+        text-align: center;
+
+    }
+
+    .mobile-app-section {
+
+        justify-items: center;
+
+        text-align: center;
+
+    }
+
+    .mobile-app-content {
+
+        text-align: center;
+
+        max-width: 100%;
+
+    }
+
+}
+
 @media (min-width: 768px) {
 
     .mobile-app-section {
