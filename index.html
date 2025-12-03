@@ -326,7 +326,7 @@
 
                 <div class="services-view-more-mobile">
 
-                    <a href="#" class="services-view-more-link">View more <span class="services-view-more-arrow">⌄</span></a>
+                    <button class="services-view-more-link" id="viewMoreBtn">View more <span class="services-view-more-arrow">⌄</span></button>
 
                 </div>
 
@@ -1142,6 +1142,38 @@
         </div>
 
     </footer>
+
+    <script>
+        // Mobile View More functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewMoreBtn = document.getElementById('viewMoreBtn');
+            const hiddenTiles = document.querySelectorAll('.service-tile-mobile-hidden');
+            
+            if (viewMoreBtn && hiddenTiles.length > 0) {
+                viewMoreBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const isExpanded = viewMoreBtn.getAttribute('data-expanded') === 'true';
+                    
+                    hiddenTiles.forEach(function(tile) {
+                        if (isExpanded) {
+                            tile.classList.remove('show-mobile');
+                        } else {
+                            tile.classList.add('show-mobile');
+                        }
+                    });
+                    
+                    if (isExpanded) {
+                        viewMoreBtn.innerHTML = 'View more <span class="services-view-more-arrow">⌄</span>';
+                        viewMoreBtn.setAttribute('data-expanded', 'false');
+                    } else {
+                        viewMoreBtn.innerHTML = 'View less <span class="services-view-more-arrow">⌄</span>';
+                        viewMoreBtn.setAttribute('data-expanded', 'true');
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 

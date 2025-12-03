@@ -1426,7 +1426,13 @@ img {
 
     .service-tile-mobile-hidden {
 
-        display: none;
+        display: none !important;
+
+    }
+
+    .service-tile-mobile-hidden.show-mobile {
+
+        display: flex !important;
 
     }
 
@@ -1459,6 +1465,14 @@ img {
         gap: 4px;
 
         line-height: 1.5rem;
+
+        background: none;
+
+        border: none;
+
+        cursor: pointer;
+
+        padding: 0;
 
     }
 
@@ -3994,7 +4008,7 @@ img {
 
     .service-tile-title {
 
-        font-size: 0.875rem;
+        font-size: 1rem;
 
     }
 
