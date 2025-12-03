@@ -806,6 +806,16 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .rds-typography__headline-1 {
+
+        margin-top: 70.4px;
+
+    }
+
+}
+
 @media (min-width: 768px) {
 
     .rds-typography__headline-1 {
