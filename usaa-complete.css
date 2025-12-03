@@ -2800,6 +2800,58 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .eligibility-layout {
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+    .eligibility-left {
+
+        display: contents;
+
+    }
+
+    .eligibility-left h2 {
+
+        order: 1;
+
+    }
+
+    .eligibility-right {
+
+        order: 2;
+
+    }
+
+    .membership-cta {
+
+        order: 3;
+
+        width: 100%;
+
+        margin-top: 24px;
+
+        flex-direction: column;
+
+        gap: 16px;
+
+    }
+
+    .membership-join-button-white {
+
+        width: 100%;
+
+        display: block;
+
+    }
+
+}
+
 .membership-join-button-white {
 
     background-color: var(--usaa-white) !important;
