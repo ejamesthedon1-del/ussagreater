@@ -2010,11 +2010,21 @@ img {
 
         text-align: left;
 
+        margin-left: 0;
+
+        padding-left: 0;
+
+        flex: 1;
+
     }
 
     .feature-item-overlay h3 {
 
         text-align: left;
+
+        margin-left: 0;
+
+        padding-left: 0;
 
     }
 
@@ -2022,7 +2032,7 @@ img {
 
         text-align: left;
 
-        padding-left: 104px;
+        padding-left: 0;
 
         margin-left: 0;
 
