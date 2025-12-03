@@ -279,7 +279,7 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-fieldset { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
   .usaa-button4 { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin-left: 8px !important; margin-right: 8px !important; padding-left: 0 !important; padding-right: 0 !important; }
-  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 0 !important; }
+  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 0 0 !important; }
   
   /* Input element constraints - full width with very small side spacing */
   .usaa-input { width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
@@ -348,7 +348,7 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-fieldset { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
   .usaa-button4 { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin-left: 8px !important; margin-right: 8px !important; padding-left: 0 !important; padding-right: 0 !important; }
-  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 0 !important; }
+  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 0 0 !important; }
   
   /* Input element constraints - full width with very small side spacing */
   .usaa-input { width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
