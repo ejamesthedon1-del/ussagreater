@@ -3446,11 +3446,13 @@ img {
 
     .help-card-text {
 
-        flex: 1;
+        flex: 0 1 auto;
 
         margin-bottom: 0;
 
         font-weight: 600;
+
+        margin-right: 4px;
 
     }
 
@@ -3458,9 +3460,11 @@ img {
 
         margin-top: 0;
 
-        margin-left: 8px;
+        margin-left: 0;
 
         font-size: 1.25rem;
+
+        flex-shrink: 0;
 
     }
 
