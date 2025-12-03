@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+/* Reset and Base Styles */
+html { text-size-adjust: 100%; line-height: 1.15; }
+body { margin: 0px; }
+h1 { font-size: 2em; margin: 0.67em 0px; }
+hr { box-sizing: initial; height: 0px; overflow: visible; }
+pre { font-family: monospace, monospace; font-size: 1em; }
+a { background-color: initial; }
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+b, strong { font-weight: bolder; }
+code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: initial; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+img { border-style: none; }
+button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0px; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+[type="button"], [type="reset"], [type="submit"], button { appearance: button; }
+fieldset { padding: 0.35em 0.75em 0.625em; }
+legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0px; white-space: normal; }
+progress { vertical-align: initial; }
+textarea { overflow: auto; }
+[type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0px; }
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; }
+[type="search"] { appearance: textfield; outline-offset: -2px; }
+[type="search"]::-webkit-search-decoration { appearance: none; }
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+details { display: block; }
+summary { display: list-item; }
+[hidden], template { display: none; }
+
+* { box-sizing: border-box; }
+html { line-height: 1.4; }
+body { color: rgb(62, 64, 66); }
+ol, p, ul { margin-bottom: 7px; margin-top: 7px; }
+ol, ul { padding-left: 30px; }
+
+.usaa-linkStyles, a { color: rgb(0, 102, 138); position: relative; text-decoration: underline; }
+.usaa-linkStyles { background: none; border: none; line-height: normal; padding: 0px; }
+.usaa-linkStyles:visited, a:visited { color: rgb(70, 108, 126); }
+.usaa-linkStyles:hover, a:hover { color: rgb(0, 127, 172); }
+.usaa-linkStyles:focus, a:focus { outline: none; }
+.keyboardActive .usaa-linkStyles:focus, .keyboardActive a:focus { outline: rgb(51, 153, 189) solid 2px; }
+button[disabled], html input[disabled] { cursor: default; }
+
+@media print {
+  html { background-color: rgb(255, 255, 255); font-size: 0.75em; }
+  body { color: rgb(0, 0, 0); }
+}
+
+/* Font Faces */
+@font-face { font-display: block; font-family: "Gotham Narrow"; font-style: normal; font-weight: 400; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/9ECBC8FFB535D0532.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow"; font-style: italic; font-weight: 400; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/A84264FB1595F2AA5.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow"; font-style: normal; font-weight: 500; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/C1B705B7AD8D5B4C6.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow"; font-style: italic; font-weight: 500; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/1FA395F189E4027D6.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow"; font-style: normal; font-weight: 700; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/F68DD4439278D0467.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow"; font-style: italic; font-weight: 700; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/591F595AD59B7B17F.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow Tabular"; font-style: normal; font-weight: 400; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/2E37EA63AAD84B117.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow Tabular"; font-style: normal; font-weight: 500; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/211D96B8333D9C07D.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Gotham Narrow Tabular"; font-style: normal; font-weight: 700; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/4419A18C70C1F3F99.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Mercury Display"; font-style: normal; font-weight: 400; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/12C383965421BC56F.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Mercury Display"; font-style: italic; font-weight: 400; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/A337D217BCC8D423B.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Mercury Display"; font-style: normal; font-weight: 600; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/9C7F15704715916A9.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Mercury Display"; font-style: italic; font-weight: 600; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/0DC8308772B377296.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Mercury Display"; font-style: normal; font-weight: 700; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/FE06BBF4C91F72FCC.woff2") format("woff2"); }
+@font-face { font-display: block; font-family: "Mercury Display"; font-style: italic; font-weight: 700; src: url("https://content.usaa.com/mcontent/static_assets/Fonts/FD370A3AF55491C4B.woff2") format("woff2"); }
+
+.font-narrow { font-family: "Gotham Narrow", Arial, sans-serif; }
+.font-normal { font-family: Gotham, Arial, sans-serif; }
+.font-serif { font-family: "Mercury Display", Times, serif; }
+.font-400 { font-weight: 400; }
+.font-500 { font-weight: 500; }
+.font-700 { font-weight: 700; }
+
+/* Screen Reader */
+.screenReader { clip: rect(1px, 1px, 1px, 1px); overflow: hidden; border: 0px !important; height: 1px !important; padding: 0px !important; position: absolute !important; width: 1px !important; }
+body:hover .screenReader a, body:hover .screenReader button, body:hover .screenReader input { display: none !important; }
+
+/* Focus Ring */
+.keyboardActive .usaa-focusRing:focus { outline: none; }
+.usaa-focusRing::after { border: 2px solid rgb(51, 153, 189); inset: -2px; content: ""; opacity: 0; position: absolute; transition: opacity 0.25s; z-index: -1; }
+.keyboardActive .usaa-focusRing:focus::after { opacity: 1; z-index: 1; }
+
+/* Skip to Content */
+.usaa-skipToContent { background: rgb(255, 255, 255); display: block; font-size: 0.889rem; font-weight: 500; left: 50%; line-height: 2; margin-left: -5em; position: absolute; text-align: center; top: 2px; width: 10em; }
+
+/* Transactional Header */
+.usaa-transactionalHeaderAndIndicator { background-color: rgb(236, 236, 235); }
+.usaa-transactionalHeader { background-color: rgb(14, 46, 73); border-bottom: 2px solid rgb(11, 34, 55); color: rgb(18, 57, 91); display: flex; height: 112px; position: relative; z-index: 0; }
+.usaa-transactionalHeader > * { background: none; border: none; flex: 0 0 auto; order: 1; position: relative; }
+.usaa-transactionalHeader .usaa-skipToContent { background: rgb(236, 236, 235); position: absolute; z-index: 1; }
+.usaa-transactionalHeader > :focus { outline: none; }
+.usaa-transactionalHeader-appName { align-items: center; display: flex; flex: 1 1 auto; font-size: 2.2807rem; font-weight: 600; margin-left: 8px; overflow: hidden; padding-top: 36px; position: relative; white-space: nowrap; width: 100%; }
+.usaa-transactionalHeader-appName span { overflow: hidden; text-overflow: ellipsis; }
+.usaa-transactionalHeader-logo { border: none; display: block; order: 0; width: 100px; }
+.usaa-transactionalHeader-logo img { left: 3px; position: relative; top: 1px; }
+.usaa-transactionalHeader-logo.usaa-focusRing::after { inset: 0px; }
+.usaa-transactionalHeader-navLink { display: block; font-size: 0.875rem; font-weight: 600; height: 100%; padding: 70px 24px 24px; position: relative; text-align: center; text-transform: uppercase; transition: background-color 0.5s; width: 12px; }
+.usaa-transactionalHeader-navLink.usaa-focusRing::after { inset: 0px; }
+.usaa-transactionalHeader-navLink:hover { background-color: rgb(227, 226, 226); }
+.usaa-transactionalHeader-navLink--exit { background: none; border: none; width: auto; }
+.usaa-transactionalHeader-navLink--exit:focus { outline: none; }
+
+/* Navigation Links */
+li.ulo-navLink { justify-content: flex-end; }
+li.ulo-navLink, li.ulo-navLink a { align-items: flex-end; color: rgb(255, 255, 255); display: flex; font-size: 14px; height: 100%; text-decoration: none; text-transform: uppercase; }
+li.ulo-navLink a { line-height: 1; padding: 24px; }
+li.ulo-navLink a:hover { background-color: rgb(11, 34, 55); }
+li.ulo-navLink .wrappedText { display: inline; }
+ul#navLinkContain { align-items: center; display: flex; flex-flow: row; justify-content: flex-end; margin: 0px; padding-left: 0px; }
+.vertical-rule { border-left: 3px solid rgb(255, 255, 255); height: 30px; margin-top: 63px; opacity: 0.9; }
+
+/* Transactional Wrapper */
+html { background: rgb(236, 236, 235); }
+.usaa-transactionalWrapper { display: flex; flex-direction: column; position: relative; transition: filter 0.3s; }
+.usaa-transactionalWrapper::before { background: rgb(47, 94, 126); inset: 0px; content: ""; position: fixed; }
+.usaa-transactionalPage { display: flex; flex: 1 0 auto; flex-direction: column; min-height: 100vh; position: relative; }
+.usaa-transactionalPage > div:first-child { flex: 0 0 auto; }
+.usaa-transactionalBodyAndFooter { background: rgb(236, 236, 235); display: flex; flex: 1 0 auto; flex-direction: column; padding: 0.1px 0px; position: relative; z-index: 0; }
+.usaa-transactionalBodyAndFooter:focus { outline: none; }
+.usaa-transactionalBodyWrapper { flex: 1 0 auto; }
+.usaa-transactionalBody { position: relative; }
+
+/* Flourish Icon */
+.layout-xxs svg#flourish-icon { display: none; }
+.layout-md svg#flourish-icon { display: block; height: 719px; opacity: 0.02; position: absolute; top: 0px; width: auto; z-index: 0; }
+.cls-1 { fill: rgb(255, 255, 255); }
+
+/* Logon Wrapper */
+.online-id.miam-logon-wrapper { position: relative; }
+.miam-logon-gutter { flex: 1; }
+.miam-logon-wrapper { display: flex; position: relative; }
+.layout-md .miam-logon-wrapper { align-items: stretch; display: flex; margin: 88px 30px 145px; position: relative; z-index: 1; }
+
+/* Banner */
+.miam-logon-banner { background: rgb(246, 245, 245); color: rgb(0, 102, 138); position: relative; }
+.layout-xxs .miam-logon-banner { background: rgb(246, 245, 245); color: rgb(0, 102, 138); height: 72px; min-width: 100vw; position: relative; }
+.layout-md .miam-logon-banner { background: none; color: rgb(255, 255, 255); flex-grow: 1; height: auto; margin: 0px; max-width: 480px; min-width: auto; }
+.miam-logon-banner h1 { display: inline-block; font-family: "Gotham Narrow", Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 500; padding: 12px 0px 12px 16px; z-index: 0; }
+.layout-md .miam-logon-banner h1 { font-family: "Mercury Display", Times, serif; font-size: 32px; left: auto; padding: 0px; position: relative; top: auto; transform: translateY(0px); }
+.miam-logon-banner h2 { display: none; }
+.layout-md .miam-logon-banner h2 { display: block; font-size: 22px; margin: 20px 0px 0px; }
+.layout-md .miam-logon-banner p { font-size: 22px; }
+.miam-logon-banner-text { position: relative; }
+.miam-logon-banner-mobile { display: none; }
+@media screen and (max-width: 767px) {
+  .miam-logon-banner-mobile { display: block; }
+}
+
+/* Join Button */
+.join-button-link { display: block; }
+.join-button { background-color: rgb(246, 245, 245); border: none; border-radius: 2px; box-shadow: rgb(125, 124, 124) 0px 0px 0px 1px inset; color: rgb(0, 102, 138); cursor: pointer; display: inline-block; font-family: "Gotham Narrow", Arial, sans-serif; font-size: 1rem; font-weight: 500; line-height: normal; min-width: 6.25rem; padding: 14px 23px 15px; position: relative; text-align: center; text-decoration: none; }
+.join-button:hover { background: rgb(246, 245, 245); }
+@media screen and (min-width: 767px) {
+  .layout-md a.join-button-link { display: block; height: 60px; margin-left: 0px; margin-top: 72px; outline: none; position: absolute; width: 196px; }
+  .layout-md .join-button { background-color: rgb(246, 245, 245); font-size: 22px; font-weight: 500; height: 60px; text-decoration: none; width: 196px; }
+}
+@media screen and (max-width: 767px) {
+  .miam-logon-banner .join-button, .miam-logon-banner a.join-button-link { display: none; }
+}
+
+/* Form Container */
+.miam-logon-fieldset { background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px; }
+.logon-wrapper-main-contain { transform: translateZ(0px); }
+.layout-xxs .logon-wrapper-main-contain { margin: auto 16px; max-width: calc(100% - 32px); }
+.layout-md .logon-wrapper-main-contain { background-color: rgb(255, 255, 255); color: rgb(62, 64, 66); margin: 0px; max-width: calc(100% - 48px); padding: 0px 24px; width: 368px; z-index: 1; }
+
+/* Form Title */
+.miam-form-title { color: rgb(62, 64, 66); font-family: "Mercury Display", Times, serif; font-size: 28px; font-weight: 600; letter-spacing: 0.3px; padding: 24px 0px; text-align: center; }
+
+/* Form Input */
+.usaa-form-v5-10-1-textInput { position: relative; width: 100%; }
+.usaa-form-v5-10-1-block { font-size: 1.125rem; min-height: 100%; position: relative; }
+.usaa-form-v5-10-1-fieldWrapper { position: relative; width: 100%; }
+.usaa-form-v5-10-1-fieldWrapper-label { font-size: 1rem; padding-left: 15px; padding-right: 15px; padding-top: 11px; }
+.usaa-form-v5-10-1-fieldLabel { cursor: pointer; display: block; font-size: 1rem; margin: 0px; }
+.usaa-form-v5-10-1-fieldLabel-text { display: inline; margin-right: 6px; }
+.usaa-input { border: none; display: inline-block; padding: 0px; position: relative; width: 100%; }
+.usaa-input input { background: rgba(0, 0, 0, 0); border: none; color: rgb(0, 102, 138); display: inline-flex; line-height: 1.2em; padding: 19px 22px; width: 100%; }
+.usaa-input input:focus { outline: none; }
+.usaa-form-v5-10-1-textInput .usaa-input input { border: none; display: block; font-size: 1.125rem; padding: 3px 15px 12px; position: relative; z-index: 1; }
+.online-id .miam-form-id-input { border: 1px solid rgb(125, 124, 124); border-width: 1px 1px 0px; }
+.online-id .miam-form-id-input > div::before { border-right: 0px; }
+.online-id .miam-form-id-input > div::after { border-bottom: 0px; }
+.keyboardFocusRing { border: 4px solid rgb(51, 153, 189); inset: 0px; content: ""; opacity: 0; position: absolute; transition: opacity 0.25s; z-index: -1; }
+.keyboardActive .usaa-input input:focus + .keyboardFocusRing { opacity: 1; z-index: 1; }
+
+/* Error Message */
+.usaa-form-v5-10-1-fieldWrapper-errorMessage { color: rgb(171, 8, 14); display: block; font-size: 1rem; font-weight: 500; margin: 0px; max-height: 0px; min-height: 0px; opacity: 0; padding-top: 0px; transition: min-height 0.3s, max-height 0.3s, opacity 0.3s; }
+.usaa-form-v5-10-1-fieldWrapper-errorMessage--active { max-height: 200px; min-height: 22px; opacity: 1; transition: min-height 0.6s, max-height 0.6s, opacity 0.6s; }
+
+/* Button */
+.usaa-button4 { background: linear-gradient(rgb(246, 245, 245), rgb(236, 236, 235)); border: none; border-radius: 2px; box-shadow: rgb(125, 124, 124) 0px 0px 0px 1px inset; box-sizing: border-box; color: rgb(0, 102, 138); cursor: pointer; display: inline-block; font-family: "Gotham Narrow", Arial, sans-serif; font-size: 1rem; font-weight: 500; line-height: normal; min-width: 6.25rem; padding: 14px 23px 15px; position: relative; text-align: center; text-decoration: none; }
+.usaa-button4:focus { outline: none; }
+.usaa-button4::after { border: 2px solid rgb(51, 153, 189); border-radius: 4px; inset: -4px; opacity: 0; pointer-events: none; transition: opacity 0.25s; box-sizing: border-box; content: ""; display: block; position: absolute; }
+.keyboardActive .usaa-button4:focus::after { opacity: 1; }
+.usaa-button4:hover { background: rgb(246, 245, 245); }
+.usaa-button4--primary { background: linear-gradient(rgb(84, 115, 45), rgb(67, 92, 36)); box-shadow: rgb(50, 69, 27) 0px -2px 0px 0px inset; color: rgb(255, 255, 255); }
+.usaa-button4--primary:hover { background: rgb(84, 115, 45); }
+.miam-btn-next { margin: 32px 0px 0px; width: 100%; }
+.layout-xxs .miam-btn-next { height: 48px; padding: 12px 31px; }
+.layout-md #main-logon-wrapper button.miam-btn-next { height: 64px; padding: 20px 31px; }
+
+/* Help Link */
+.help-link { margin: 24px 0px 64px; text-align: center; }
+.layout-md .help-link { margin: 48px 0px; }
+.help-link a { color: rgb(0, 102, 138); text-decoration: underline; }
+
+/* Footer */
+.usaa-transactionalFooter-footer { background: rgb(14, 46, 73); color: rgb(255, 255, 255); font-size: 0.8125rem; opacity: 1; transition: opacity 0.5s; }
+.usaa-transactionalFooter-content { margin: 0px auto; padding: 32px 16px; }
+.layout-sm .usaa-transactionalFooter-content { padding: 32px 24px; }
+.layout-lg .usaa-transactionalFooter-content { max-width: 1190px; padding: 32px 56px; }
+.usaa-transactionalFooter-copyright { margin: 0px 0px 14px; }
+.usaa-transactionalFooter a { color: rgb(255, 255, 255); }
+.usaa-transactionalFooter a:focus, .usaa-transactionalFooter a:hover { outline: rgb(255, 255, 255) solid 1px; }
+.pageFooter-disclosures { list-style: none; margin: 0px; max-width: none; padding: 0px; }
+.pageFooter-disclosures li, .pageFooter-disclosures p, .pageFooter-disclosures ul { max-width: none; }
+.pageFooter-disclosures li, .pageFooter-disclosures p { font-size: 0.875rem; line-height: 1.5em; margin: 0px 0px 15px; }
+
+/* Responsive */
+@media (max-width: 767px) {
+  .usaa-transactionalHeader { border-bottom: 2px solid rgb(208, 207, 206); height: 100px; }
+  .usaa-transactionalHeader-logo { width: 90px; }
+  .usaa-transactionalHeader-logo img { height: 56px; left: 4px; top: 2px; }
+  .usaa-transactionalHeader-appName { font-size: 1.625rem; }
+  .usaa-transactionalHeader-navLink { font-size: 0.75rem; padding: 64px 22px 18px; }
+  .usaa-transactionalHeader-navLink--exit { padding: 69.5px 16px 16px; width: 47px; }
+  li.ulo-navLink .wrappedText { display: none; }
+  li.ulo-navLink a { font-size: 12px; padding: 0px 16px 16px 0px; }
+  .vertical-rule { margin-top: 60px; }
+}
+
+@media (max-width: 567px) {
+  .usaa-transactionalHeader { height: 74px; }
+  .usaa-transactionalHeader-logo { margin-right: -2px; width: 70px; }
+  .usaa-transactionalHeader-logo img { height: 44px; left: 0px; top: 1px; }
+  .usaa-transactionalHeader-appName { font-size: 1.25rem; margin-left: 0px; padding-top: 26px; }
+  .usaa-transactionalHeader-navLink { padding: 43px 16px 16px; }
+  .usaa-transactionalHeader-navLink--exit { width: 48px; }
+  li.ulo-navLink a { padding: 0px 16px 16px 0px; }
+  .vertical-rule { margin-top: 34px; }
+}
+
+/* Layout Classes */
+.layout-xxs, .layout-xs, .layout-sm, .layout-md, .layout-lg, .layout-xl, .layout-xxl, .layout-xxxl { }
+
+@media (min-width: 768px) {
+  .layout-md .usaa-transactionalBodyWrapper { background-color: rgb(14, 46, 73); color: rgb(255, 255, 255); }
+}
+
+@media (min-width: 992px) {
+  .layout-lg { }
+}
+
+@media (min-width: 1200px) {
+  .layout-xl { }
+}
+
+@media (min-width: 1600px) {
+  .layout-xxl { }
+}
+
+@media (min-width: 1920px) {
+  .layout-xxxl { }
+}
+
+/* Additional Styles */
+.usaa-form-v5-10-1-formGroup { background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px; display: flex; flex: 1 1 auto; flex-flow: wrap; position: relative; }
+.usaa-form-v5-10-1-formGroup::before { border-color: rgba(0, 0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgba(0, 0, 0, 0); border-style: solid; border-width: 1px; inset: 0px; content: ""; pointer-events: none; position: absolute; z-index: 3; }
+.miam-logon-form form div { box-shadow: none; }
+
