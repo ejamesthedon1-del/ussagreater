@@ -2000,11 +2000,23 @@ img {
 
     .feature-item-overlay {
 
-        flex-direction: column;
+        display: grid;
 
-        align-items: flex-start;
+        grid-template-columns: 80px 1fr;
 
-        gap: 12px;
+        grid-template-rows: auto auto;
+
+        gap: 12px 24px;
+
+        align-items: start;
+
+    }
+
+    .feature-icon-overlay {
+
+        grid-column: 1;
+
+        grid-row: 1;
 
     }
 
@@ -2016,19 +2028,29 @@ img {
 
     .feature-item-overlay h3 {
 
+        grid-column: 2;
+
+        grid-row: 1;
+
         text-align: left;
 
-        margin-left: 104px;
+        margin-left: 0;
 
         padding-left: 0;
 
         margin-bottom: 0;
 
-        width: calc(100% - 104px);
+        margin-top: 0;
+
+        width: 100%;
 
     }
 
     .feature-item-overlay p {
+
+        grid-column: 1 / -1;
+
+        grid-row: 2;
 
         text-align: left;
 
