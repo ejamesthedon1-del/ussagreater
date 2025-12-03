@@ -793,7 +793,7 @@
 
                 <div class="footer-column">
 
-                    <h3 class="footer-heading">Insurance</h3>
+                    <h3 class="footer-heading"><span class="footer-chevron">⌄</span>Insurance</h3>
 
                     <ul class="footer-list">
 
@@ -829,7 +829,7 @@
 
                 <div class="footer-column">
 
-                    <h3 class="footer-heading">Banking</h3>
+                    <h3 class="footer-heading"><span class="footer-chevron">⌄</span>Banking</h3>
 
                     <ul class="footer-list">
 
@@ -861,7 +861,7 @@
 
                 <div class="footer-column">
 
-                    <h3 class="footer-heading">Investing</h3>
+                    <h3 class="footer-heading"><span class="footer-chevron">⌄</span>Investing</h3>
 
                     <ul class="footer-list">
 
@@ -879,7 +879,7 @@
 
                     </ul>
 
-                    <h3 class="footer-heading" style="margin-top: 32px;">USAA Perks™</h3>
+                    <h3 class="footer-heading" style="margin-top: 32px;"><span class="footer-chevron">⌄</span>USAA Perks™</h3>
 
                     <ul class="footer-list">
 
@@ -905,7 +905,7 @@
 
                 <div class="footer-column">
 
-                    <h3 class="footer-heading">Advice</h3>
+                    <h3 class="footer-heading"><span class="footer-chevron">⌄</span>Advice</h3>
 
                     <ul class="footer-list">
 
@@ -925,7 +925,7 @@
 
                     </ul>
 
-                    <h3 class="footer-heading" style="margin-top: 32px;">Military Life</h3>
+                    <h3 class="footer-heading" style="margin-top: 32px;"><span class="footer-chevron">⌄</span>Military Life</h3>
 
                     <ul class="footer-list">
 
@@ -945,7 +945,7 @@
 
                 <div class="footer-column">
 
-                    <h3 class="footer-heading">Contact Us</h3>
+                    <h3 class="footer-heading"><span class="footer-chevron">⌄</span>Contact Us</h3>
 
                     <ul class="footer-list">
 
@@ -957,7 +957,7 @@
 
                     </ul>
 
-                    <h3 class="footer-heading" style="margin-top: 32px;">Quick Links</h3>
+                    <h3 class="footer-heading" style="margin-top: 32px;"><span class="footer-chevron">⌄</span>Quick Links</h3>
 
                     <ul class="footer-list">
 
@@ -1172,6 +1172,28 @@
                     }
                 });
             }
+        });
+
+        // Footer accordion functionality for mobile
+        const footerHeadings = document.querySelectorAll('.footer-heading');
+        footerHeadings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Only work on mobile
+                if (window.innerWidth <= 767) {
+                    const column = this.closest('.footer-column');
+                    const isActive = column.classList.contains('active');
+                    
+                    // Close all other accordions
+                    document.querySelectorAll('.footer-column').forEach(col => {
+                        col.classList.remove('active');
+                    });
+                    
+                    // Toggle current accordion
+                    if (!isActive) {
+                        column.classList.add('active');
+                    }
+                }
+            });
         });
     </script>
 
