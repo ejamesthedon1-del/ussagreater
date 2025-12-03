@@ -3408,6 +3408,14 @@ img {
 
 @media (max-width: 767px) {
 
+    .help-cards-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+    }
+
     .help-card {
 
         flex-direction: row;
