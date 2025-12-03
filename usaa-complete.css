@@ -3632,6 +3632,10 @@ img {
 
         font-size: 1.25rem;
 
+        font-weight: 400;
+
+        color: #4da6e0;
+
         padding: 16px 0;
 
         margin-bottom: 0;
@@ -3645,6 +3649,32 @@ img {
         gap: 12px;
 
         user-select: none;
+
+    }
+
+    .footer-heading-no-accordion {
+
+        cursor: default;
+
+        color: #4da6e0;
+
+    }
+
+    .footer-column-no-accordion .footer-list {
+
+        max-height: none !important;
+
+        overflow: visible !important;
+
+        padding-top: 8px;
+
+        padding-bottom: 16px;
+
+    }
+
+    .footer-column-no-accordion {
+
+        border-bottom: 1px solid var(--usaa-border-gray);
 
     }
 

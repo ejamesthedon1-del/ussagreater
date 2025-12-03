@@ -943,9 +943,9 @@
 
                 <!-- Contact Column -->
 
-                <div class="footer-column">
+                <div class="footer-column footer-column-no-accordion">
 
-                    <h3 class="footer-heading"><span class="footer-chevron">⌄</span>Contact Us</h3>
+                    <h3 class="footer-heading footer-heading-no-accordion">Contact Us</h3>
 
                     <ul class="footer-list">
 
@@ -957,7 +957,7 @@
 
                     </ul>
 
-                    <h3 class="footer-heading" style="margin-top: 32px;"><span class="footer-chevron">⌄</span>Quick Links</h3>
+                    <h3 class="footer-heading footer-heading-no-accordion" style="margin-top: 32px;">Quick Links</h3>
 
                     <ul class="footer-list">
 
@@ -1175,7 +1175,7 @@
         });
 
         // Footer accordion functionality for mobile
-        const footerHeadings = document.querySelectorAll('.footer-heading');
+        const footerHeadings = document.querySelectorAll('.footer-heading:not(.footer-heading-no-accordion)');
         footerHeadings.forEach(heading => {
             heading.addEventListener('click', function() {
                 // Only work on mobile
@@ -1183,8 +1183,8 @@
                     const column = this.closest('.footer-column');
                     const isActive = column.classList.contains('active');
                     
-                    // Close all other accordions
-                    document.querySelectorAll('.footer-column').forEach(col => {
+                    // Close all other accordions (except non-accordion ones)
+                    document.querySelectorAll('.footer-column:not(.footer-column-no-accordion)').forEach(col => {
                         col.classList.remove('active');
                     });
                     
