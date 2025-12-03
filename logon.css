@@ -258,9 +258,9 @@ html { background: rgb(236, 236, 235); }
   svg#flourish-icon { display: none !important; }
   
   /* Wrapper adjustments - center everything, remove container constraints */
-  .miam-logon-wrapper { margin: 0; padding: 0; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 200px); width: 100%; }
+  .miam-logon-wrapper { margin: 0; padding: 0; flex-direction: column; align-items: center; justify-content: flex-start; min-height: calc(100vh - 200px); width: 100%; padding-top: calc(1in - 96px); }
   .miam-logon-gutter { display: none; }
-  .logon-wrapper-main-contain { margin: 0; padding: 0; max-width: none; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .logon-wrapper-main-contain { margin: 0; padding: 0; max-width: none; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: -1in; }
   
   /* Center form elements - remove container constraints */
   .miam-logon-form { width: 100%; max-width: none; padding: 0 16px; display: flex; flex-direction: column; align-items: center; }
@@ -309,9 +309,9 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-mobile-modal { display: none !important; }
   
   /* Wrapper adjustments - center everything, remove container constraints */
-  .miam-logon-wrapper { margin: 0; padding: 0; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 200px); width: 100%; }
+  .miam-logon-wrapper { margin: 0; padding: 0; flex-direction: column; align-items: center; justify-content: flex-start; min-height: calc(100vh - 200px); width: 100%; padding-top: calc(1in - 96px); }
   .miam-logon-gutter { display: none; }
-  .logon-wrapper-main-contain { margin: 0; padding: 0; max-width: none; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .logon-wrapper-main-contain { margin: 0; padding: 0; max-width: none; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: -1in; }
   
   /* Center form elements - remove container constraints */
   .miam-logon-form { width: 100%; max-width: none; padding: 0 16px; display: flex; flex-direction: column; align-items: center; }
