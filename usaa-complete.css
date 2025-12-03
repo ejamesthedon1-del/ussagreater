@@ -3672,11 +3672,11 @@ img {
 
     .promo-banner-large-image {
 
-        height: 400px;
+        height: 450px;
 
         object-fit: cover;
 
-        object-position: 70% center;
+        object-position: 85% center;
 
     }
 
@@ -4122,17 +4122,23 @@ img {
 
     .promo-banner-title {
 
-        font-size: 1.5rem;
+        font-size: 1.75rem;
 
-        line-height: 1.75rem;
+        line-height: 2rem;
 
     }
 
     .promo-banner-title-large {
 
-        font-size: 1.5rem;
+        font-size: 1.75rem;
 
-        line-height: 1.75rem;
+        line-height: 2rem;
+
+    }
+
+    .promo-banner-label {
+
+        font-size: 1rem;
 
     }
 
