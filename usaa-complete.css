@@ -2000,21 +2000,19 @@ img {
 
     .feature-item-overlay {
 
+        flex-direction: column;
+
         align-items: flex-start;
 
         justify-content: flex-start;
+
+        gap: 12px;
 
     }
 
     .feature-item-overlay-content {
 
-        text-align: left;
-
-        margin-left: 0;
-
-        padding-left: 0;
-
-        flex: 1;
+        display: contents;
 
     }
 
@@ -2022,9 +2020,13 @@ img {
 
         text-align: left;
 
-        margin-left: 0;
+        margin-left: 104px;
 
         padding-left: 0;
+
+        margin-bottom: 0;
+
+        width: calc(100% - 104px);
 
     }
 
@@ -2035,6 +2037,10 @@ img {
         padding-left: 0;
 
         margin-left: 0;
+
+        margin-top: 0;
+
+        width: 100%;
 
     }
 
