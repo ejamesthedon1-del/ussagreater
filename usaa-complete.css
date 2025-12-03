@@ -1430,9 +1430,33 @@ img {
 
     }
 
+    .services-grid {
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+    .service-tile {
+
+        order: 0;
+
+    }
+
+    .service-tile-mobile-hidden {
+
+        display: none !important;
+
+        order: 999;
+
+    }
+
     .service-tile-mobile-hidden.show-mobile {
 
         display: flex !important;
+
+        order: 999;
 
     }
 
@@ -1443,6 +1467,8 @@ img {
         text-align: center;
 
         margin-top: 24px;
+
+        order: 4;
 
     }
 
