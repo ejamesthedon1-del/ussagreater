@@ -1996,6 +1996,16 @@ img {
 
 }
 
+.highlight-link {
+
+    color: var(--usaa-link-blue);
+
+    text-decoration: underline;
+
+    cursor: pointer;
+
+}
+
 @media (max-width: 767px) {
 
     .feature-item-overlay {
