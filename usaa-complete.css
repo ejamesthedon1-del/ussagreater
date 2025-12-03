@@ -2022,7 +2022,7 @@ img {
 
         text-align: left;
 
-        padding-left: 104px;
+        padding-left: 0;
 
         margin-left: 0;
 
@@ -3211,6 +3211,56 @@ img {
     line-height: 1;
 
     margin-top: auto;
+
+}
+
+@media (max-width: 767px) {
+
+    .help-card {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        text-align: left;
+
+        padding: 16px;
+
+        min-height: 80px;
+
+    }
+
+    .help-card-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        margin-bottom: 0;
+
+        margin-right: 16px;
+
+        flex-shrink: 0;
+
+    }
+
+    .help-card-text {
+
+        flex: 1;
+
+        margin-bottom: 0;
+
+    }
+
+    .help-card-arrow {
+
+        margin-top: 0;
+
+        margin-left: auto;
+
+        font-size: 1.25rem;
+
+    }
 
 }
 
