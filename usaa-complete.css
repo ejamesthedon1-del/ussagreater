@@ -3668,6 +3668,20 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .promo-banner-large-image {
+
+        height: 400px;
+
+        object-fit: cover;
+
+        object-position: 70% center;
+
+    }
+
+}
+
 .promo-banner-image-overlay {
 
     position: absolute;
