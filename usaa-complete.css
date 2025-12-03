@@ -2008,7 +2008,7 @@ img {
 
         gap: 12px 24px;
 
-        align-items: start;
+        align-items: center;
 
     }
 
@@ -2017,6 +2017,10 @@ img {
         grid-column: 1;
 
         grid-row: 1;
+
+        justify-self: start;
+
+        align-self: center;
 
     }
 
@@ -2043,6 +2047,8 @@ img {
         margin-top: 0;
 
         width: 100%;
+
+        align-self: center;
 
     }
 
