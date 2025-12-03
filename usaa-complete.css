@@ -3546,6 +3546,16 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .promo-banner-button-wrapper {
+
+        margin-top: -16px;
+
+    }
+
+}
+
 .membership-promo-box {
 
     background: var(--usaa-white);
