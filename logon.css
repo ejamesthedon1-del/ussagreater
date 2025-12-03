@@ -266,14 +266,14 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-form { width: 100%; max-width: none; padding: 0 16px; display: flex; flex-direction: column; align-items: center; }
   #main-logon-wrapper { width: 100%; padding: 0; margin: 0; display: flex; flex-direction: column; align-items: center; }
   .miam-form-title { text-align: center; width: 100%; margin: 0 auto; padding: 0 16px; }
-  .usaa-form-v5-10-1-textInput { width: calc(100% - 32px); max-width: 400px; margin: 0 auto; border: none !important; }
-  .usaa-form-v5-10-1-block { width: 100%; border: none !important; }
-  .usaa-form-v5-10-1-fieldWrapper { width: 100%; border: none !important; }
-  .miam-form-id-input { border: none !important; }
-  .usaa-form-v5-10-1-formGroup { border: none !important; box-shadow: none !important; }
-  .usaa-form-v5-10-1-formGroup::before { border: none !important; }
-  .miam-btn-next { width: calc(100% - 32px); max-width: 400px; margin: 32px auto 0; border: none !important; box-shadow: none !important; }
-  .usaa-button4 { border: none !important; box-shadow: none !important; }
+  .usaa-form-v5-10-1-textInput { width: calc(100% - 32px); max-width: 400px; margin: 0 auto; }
+  .usaa-form-v5-10-1-block { width: 100%; }
+  .usaa-form-v5-10-1-fieldWrapper { width: 100%; }
+  /* Remove only box-shadows on mobile */
+  .usaa-form-v5-10-1-formGroup { box-shadow: none !important; }
+  .miam-logon-fieldset { box-shadow: none !important; }
+  .miam-btn-next { width: calc(100% - 32px); max-width: 400px; margin: 32px auto 0; box-shadow: none !important; }
+  .usaa-button4 { box-shadow: none !important; }
   .help-link { width: 100%; text-align: center; padding: 0 16px; }
 }
 
@@ -317,14 +317,14 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-form { width: 100%; max-width: none; padding: 0 16px; display: flex; flex-direction: column; align-items: center; }
   #main-logon-wrapper { width: 100%; padding: 0; margin: 0; display: flex; flex-direction: column; align-items: center; }
   .miam-form-title { text-align: center; width: 100%; margin: 0 auto; padding: 0 16px; }
-  .usaa-form-v5-10-1-textInput { width: calc(100% - 32px); max-width: 400px; margin: 0 auto; border: none !important; }
-  .usaa-form-v5-10-1-block { width: 100%; border: none !important; }
-  .usaa-form-v5-10-1-fieldWrapper { width: 100%; border: none !important; }
-  .miam-form-id-input { border: none !important; }
-  .usaa-form-v5-10-1-formGroup { border: none !important; box-shadow: none !important; }
-  .usaa-form-v5-10-1-formGroup::before { border: none !important; }
-  .miam-btn-next { width: calc(100% - 32px); max-width: 400px; margin: 32px auto 0; border: none !important; box-shadow: none !important; }
-  .usaa-button4 { border: none !important; box-shadow: none !important; }
+  .usaa-form-v5-10-1-textInput { width: calc(100% - 32px); max-width: 400px; margin: 0 auto; }
+  .usaa-form-v5-10-1-block { width: 100%; }
+  .usaa-form-v5-10-1-fieldWrapper { width: 100%; }
+  /* Remove only box-shadows on mobile */
+  .usaa-form-v5-10-1-formGroup { box-shadow: none !important; }
+  .miam-logon-fieldset { box-shadow: none !important; }
+  .miam-btn-next { width: calc(100% - 32px); max-width: 400px; margin: 32px auto 0; box-shadow: none !important; }
+  .usaa-button4 { box-shadow: none !important; }
   .help-link { width: 100%; text-align: center; padding: 0 16px; }
 }
 
