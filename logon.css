@@ -246,21 +246,24 @@ html { background: rgb(236, 236, 235); }
   li.ulo-navLink a { font-size: 12px; padding: 0px 16px 16px 0px; }
   .vertical-rule { margin-top: 60px; }
   
-  /* Banner adjustments for mobile */
-  .miam-logon-banner { background: rgb(246, 245, 245); height: auto; min-height: 60px; min-width: 100%; position: relative; margin: 0; padding: 12px 16px; }
-  .miam-logon-banner-text { height: auto; padding: 0; }
-  .miam-logon-banner h1 { font-size: 14px; padding: 0; margin: 0; display: block; }
-  .miam-logon-banner p { display: none; }
-  .miam-logon-banner-mobile { display: none; }
-  .wcm-content { display: block; }
+  /* Hide banner and other elements on mobile */
+  .miam-logon-banner { display: none !important; }
+  .miam-logon-banner-text { display: none !important; }
+  .miam-logon-banner-mobile { display: none !important; }
+  .wcm-content { display: none !important; }
+  .join-button-link { display: none !important; }
+  .miam-logon-mobile-modal { display: none !important; }
   
-  /* Wrapper adjustments */
-  .miam-logon-wrapper { margin: 0; flex-direction: column; align-items: center; }
+  /* Remove flourish icon on mobile */
+  svg#flourish-icon { display: none !important; }
+  
+  /* Wrapper adjustments - center everything */
+  .miam-logon-wrapper { margin: 0; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 200px); }
   .miam-logon-gutter { display: none; }
-  .logon-wrapper-main-contain { margin: 0 auto; padding: 24px 16px; max-width: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .logon-wrapper-main-contain { margin: 0 auto; padding: 24px 16px; max-width: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
   
   /* Center form elements */
-  .miam-logon-form { width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .miam-logon-form { width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: center; }
   #main-logon-wrapper { width: 100%; display: flex; flex-direction: column; align-items: center; }
   .miam-form-title { text-align: center; width: 100%; }
   .usaa-form-v5-10-1-textInput { width: 100%; max-width: 100%; }
@@ -268,9 +271,6 @@ html { background: rgb(236, 236, 235); }
   .usaa-form-v5-10-1-fieldWrapper { width: 100%; }
   .miam-btn-next { width: 100%; max-width: 100%; }
   .help-link { width: 100%; text-align: center; }
-  
-  /* Remove flourish icon on mobile */
-  svg#flourish-icon { display: none !important; }
 }
 
 @media (max-width: 567px) {
@@ -296,19 +296,21 @@ html { background: rgb(236, 236, 235); }
   li.ulo-navLink a { padding: 0px 16px 16px 0px; }
   .vertical-rule { margin-top: 34px; }
   
-  /* Banner adjustments */
-  .miam-logon-banner { background: rgb(246, 245, 245); height: auto; min-height: 50px; min-width: 100%; position: relative; margin: 0; padding: 10px 16px; }
-  .miam-logon-banner-text { height: auto; padding: 0; }
-  .miam-logon-banner h1 { font-size: 13px; padding: 0; margin: 0; display: block; }
-  .miam-logon-banner p { display: none; }
+  /* Hide banner and other elements on mobile */
+  .miam-logon-banner { display: none !important; }
+  .miam-logon-banner-text { display: none !important; }
+  .miam-logon-banner-mobile { display: none !important; }
+  .wcm-content { display: none !important; }
+  .join-button-link { display: none !important; }
+  .miam-logon-mobile-modal { display: none !important; }
   
-  /* Wrapper adjustments */
-  .miam-logon-wrapper { margin: 0; flex-direction: column; align-items: center; }
+  /* Wrapper adjustments - center everything */
+  .miam-logon-wrapper { margin: 0; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 200px); }
   .miam-logon-gutter { display: none; }
-  .logon-wrapper-main-contain { margin: 0 auto; padding: 20px 16px; max-width: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .logon-wrapper-main-contain { margin: 0 auto; padding: 20px 16px; max-width: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
   
   /* Center form elements */
-  .miam-logon-form { width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .miam-logon-form { width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: center; }
   #main-logon-wrapper { width: 100%; display: flex; flex-direction: column; align-items: center; }
   .miam-form-title { text-align: center; width: 100%; }
   .usaa-form-v5-10-1-textInput { width: 100%; max-width: 100%; }
