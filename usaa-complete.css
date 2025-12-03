@@ -3140,7 +3140,7 @@ img {
 
     .qr-code {
 
-        text-align: center;
+        display: none;
 
     }
 
