@@ -1454,7 +1454,7 @@ img {
 
         display: inline-flex;
 
-        align-items: flex-start;
+        align-items: center;
 
         gap: 4px;
 
@@ -1478,9 +1478,7 @@ img {
 
         color: var(--usaa-link-blue);
 
-        vertical-align: top;
-
-        margin-top: 0.1em;
+        vertical-align: middle;
 
     }
 
