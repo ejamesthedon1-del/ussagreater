@@ -1212,7 +1212,7 @@ img {
 
         margin-top: -50px;
 
-        padding: 32px 0 0;
+        padding: 32px 0 48px;
 
     }
 
@@ -1265,6 +1265,16 @@ img {
     gap: 16px;
 
     margin-bottom: 48px;
+
+}
+
+@media (max-width: 767px) {
+
+    .services-grid {
+
+        margin-bottom: 0;
+
+    }
 
 }
 
