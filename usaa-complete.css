@@ -2306,7 +2306,7 @@ img {
 
 @media (max-width: 767px) {
 
-    .credit-card-checkmark {
+    .credit-card-promo-graphic {
 
         display: none;
 
@@ -2315,6 +2315,12 @@ img {
     .credit-card-label {
 
         font-weight: 900;
+
+        font-size: 1.75rem;
+
+        line-height: 2rem;
+
+        margin-bottom: 16px;
 
     }
 
