@@ -3666,12 +3666,6 @@ img {
 
         color: var(--usaa-link-blue);
 
-        border-bottom: 1px solid var(--usaa-border-gray);
-
-    }
-
-    .footer-heading-no-accordion:last-of-type {
-
         border-bottom: none;
 
     }
@@ -3690,7 +3684,13 @@ img {
 
     .footer-column-no-accordion {
 
-        border-bottom: 1px solid var(--usaa-border-gray);
+        border: 1px solid var(--usaa-border-gray);
+
+        border-radius: 4px;
+
+        padding: 16px;
+
+        margin-top: 16px;
 
     }
 
