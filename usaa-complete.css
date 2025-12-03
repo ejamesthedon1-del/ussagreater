@@ -1442,7 +1442,7 @@ img {
 
     .services-view-more-link {
 
-        color: #4da6e0;
+        color: var(--usaa-link-blue);
 
         text-decoration: none;
 
@@ -1454,7 +1454,7 @@ img {
 
         display: inline-flex;
 
-        align-items: center;
+        align-items: flex-start;
 
         gap: 4px;
 
@@ -1476,9 +1476,11 @@ img {
 
         display: inline-block;
 
-        color: #4da6e0;
+        color: var(--usaa-link-blue);
 
-        vertical-align: baseline;
+        vertical-align: top;
+
+        margin-top: 0.1em;
 
     }
 
