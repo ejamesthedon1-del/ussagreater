@@ -241,7 +241,10 @@ html { background: rgb(236, 236, 235); }
   .usaa-transactionalHeader { border-bottom: 2px solid rgb(208, 207, 206); height: 100px; }
   .usaa-transactionalHeader-logo { width: 90px; }
   .usaa-transactionalHeader-logo img { height: 56px; left: 4px; top: 2px; }
-  .usaa-transactionalHeader-appName { font-size: 1.625rem; }
+  .usaa-transactionalHeader-appName { font-size: 1.625rem; position: relative; }
+  .unified-logon-text { display: none !important; }
+  .usaa-logo-mobile { display: block !important; height: 40px; width: auto; position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; }
+  #Logo-link { display: none !important; }
   .usaa-transactionalHeader-navLink { font-size: 0.75rem; padding: 64px 22px 18px; }
   .usaa-transactionalHeader-navLink--exit { padding: 69.5px 16px 16px; width: 47px; }
   li.ulo-navLink .wrappedText { display: none; }
@@ -314,7 +317,10 @@ html { background: rgb(236, 236, 235); }
   .usaa-transactionalHeader { height: 74px; }
   .usaa-transactionalHeader-logo { margin-right: -2px; width: 70px; }
   .usaa-transactionalHeader-logo img { height: 44px; left: 0px; top: 1px; }
-  .usaa-transactionalHeader-appName { font-size: 1.25rem; margin-left: 0px; padding-top: 26px; }
+  .usaa-transactionalHeader-appName { font-size: 1.25rem; margin-left: 0px; padding-top: 26px; position: relative; }
+  .unified-logon-text { display: none !important; }
+  .usaa-logo-mobile { display: block !important; height: 35px; width: auto; position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; }
+  #Logo-link { display: none !important; }
   .usaa-transactionalHeader-navLink { padding: 43px 16px 16px; }
   .usaa-transactionalHeader-navLink--exit { width: 48px; }
   li.ulo-navLink a { padding: 0px 16px 16px 0px; }
