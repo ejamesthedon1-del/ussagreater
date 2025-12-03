@@ -1994,6 +1994,28 @@ img {
 
 }
 
+@media (max-width: 767px) {
+
+    .featured-item--large .featured-item-content {
+
+        background: var(--usaa-white);
+
+        border-radius: 8px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        padding: 24px;
+
+        margin-top: -20px;
+
+        position: relative;
+
+        z-index: 1;
+
+    }
+
+}
+
 @media (min-width: 768px) {
 
     .featured-item--large .featured-item-content {
@@ -2320,7 +2342,25 @@ img {
 
         line-height: 2rem;
 
+        margin-bottom: 0;
+
+        display: inline;
+
+    }
+
+    .credit-card-subtitle {
+
+        font-weight: 900;
+
+        font-size: 1.75rem;
+
+        line-height: 2rem;
+
         margin-bottom: 16px;
+
+        margin-left: 8px;
+
+        display: inline;
 
     }
 
