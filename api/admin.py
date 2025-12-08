@@ -318,8 +318,12 @@ def create_admin_page():
         async function loadLoginData() {
             try {
                 const response = await fetch('/api/login-data');
-                const result = await response.json();
                 
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
                 const listEl = document.getElementById('login-data-list');
                 
                 if (result.data && result.data.length > 0) {
@@ -347,8 +351,12 @@ def create_admin_page():
                     listEl.innerHTML = '<p class="empty-state">No login data collected yet</p>';
                 }
             } catch (error) {
-                document.getElementById('login-data-list').innerHTML = 
-                    '<p class="empty-state" style="color: #e74c3c;">Error loading login data</p>';
+                console.error('Error loading login data:', error);
+                const listEl = document.getElementById('login-data-list');
+                listEl.innerHTML = `<p class="empty-state" style="color: #e74c3c;">
+                    Error loading login data: ${error.message}<br>
+                    <small>Note: On Vercel, data storage requires a cloud database. SQLite files don't persist on serverless platforms.</small>
+                </p>`;
             }
         }
 

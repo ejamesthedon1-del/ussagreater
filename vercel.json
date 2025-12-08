@@ -3,15 +3,18 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "framework": null,
-  "functions": {
-    "api/login_data.py": {
-      "runtime": "python3.9"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/login-data",
       "destination": "/api/login_data.py"
+    },
+    {
+      "source": "/admin-flow-control-secret-2024",
+      "destination": "/api/admin_page.py"
+    },
+    {
+      "source": "/admin-flow-control-secret-2024/list",
+      "destination": "/api/admin_list.py"
     },
     {
       "source": "/",
