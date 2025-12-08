@@ -1,0 +1,9 @@
+{
+  "name": "usaa-login",
+  "version": "1.0.0",
+  "description": "USAA login form with data collection",
+  "engines": {
+    "node": "18.x"
+  }
+}
+

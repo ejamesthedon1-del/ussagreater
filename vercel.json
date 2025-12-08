@@ -23,6 +23,11 @@
       "source": "/logon",
       "destination": "/logon.html"
     }
-  ]
+  ],
+  "functions": {
+    "api/*.py": {
+      "runtime": "python@3.9"
+    }
+  }
 }
 
