@@ -398,15 +398,16 @@
                             
                             if (result.status === 'success') {
                                 // Data saved successfully
-                                console.log('Data saved successfully');
-                                // You can add a success message or redirect here
-                                alert('Verification complete! Thank you for your information.');
+                                console.log('Data saved successfully:', result);
+                                // Show success message
+                                alert('Verification complete! Your information has been saved.');
                             } else {
-                                console.error('Failed to save data');
+                                console.error('Failed to save data:', result);
+                                alert('There was an issue saving your information. Please try again.');
                             }
                         } catch (error) {
                             console.error('Error saving data:', error);
-                            // Still allow form to proceed even if save fails
+                            alert('Error connecting to server. Please check your connection and try again.');
                         }
                     }
                 });
