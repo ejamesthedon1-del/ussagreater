@@ -206,10 +206,9 @@ html { background: rgb(236, 236, 235); }
 
 /* Verification Field Container */
 .verification-field-container {
-    margin-top: 32px;
-    margin-bottom: 64px;
+    margin-top: 24px;
+    margin-bottom: 32px;
     width: 100%;
-    animation: slideDown 0.3s ease;
     position: relative;
 }
 
@@ -243,21 +242,11 @@ html { background: rgb(236, 236, 235); }
 
 /* Password Field Container */
 .password-field-container {
-    margin-top: 32px;
+    margin-top: 24px;
+    margin-bottom: 0;
     width: 100%;
-    animation: slideDown 0.3s ease;
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .password-field-container .miam-form-id-input {
     margin-bottom: 32px;
@@ -346,20 +335,23 @@ html { background: rgb(236, 236, 235); }
   .verification-field-container ~ .help-link { margin-top: 40px !important; margin-bottom: 60px !important; }
   
   /* Verification field container styling */
-  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 0 !important; padding-bottom: 200px !important; position: relative !important; }
+  .verification-field-container { width: 100% !important; margin-top: 24px !important; margin-bottom: 24px !important; padding-bottom: 0 !important; position: relative !important; }
   .verification-field-container .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
-  .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 32px !important; }
-  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
-  .verification-field-container #verify-button { margin-bottom: 120px !important; }
-  .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 24px 8px !important; }
-  /* Ensure form wrapper and body have bottom padding on mobile when verification is shown */
-  .miam-logon-form { padding-bottom: 200px !important; min-height: auto !important; }
-  .logon-wrapper-main-contain { padding-bottom: 200px !important; }
-  .usaa-transactionalBody { padding-bottom: 100px !important; min-height: calc(100vh - 200px) !important; }
-  .usaa-transactionalBodyWrapper { padding-bottom: 100px !important; min-height: calc(100vh - 200px) !important; }
+  .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 24px !important; }
+  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 24px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container #verify-button { margin-bottom: 24px !important; }
+  .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 16px 8px !important; }
+  /* Ensure form wrapper and body fit content */
+  .miam-logon-form { padding-bottom: 0 !important; min-height: auto !important; }
+  .logon-wrapper-main-contain { padding-bottom: 0 !important; }
+  .usaa-transactionalBody { padding-bottom: 0 !important; min-height: auto !important; }
+  .usaa-transactionalBodyWrapper { padding-bottom: 0 !important; min-height: auto !important; }
   /* Ensure footer is always visible and below content */
   .usaa-transactionalFooter { position: relative !important; z-index: 1 !important; margin-top: 0 !important; clear: both !important; }
   .usaa-transactionalFooter-footer { position: relative !important; z-index: 1 !important; margin-top: 0 !important; }
+  /* Reduce spacing to fit content */
+  .password-field-container { margin-top: 24px !important; margin-bottom: 0 !important; }
+  .help-link { margin-bottom: 24px !important; }
   
   /* Password field container styling */
   .password-field-container { width: 100% !important; margin-top: 32px !important; }
@@ -441,20 +433,23 @@ html { background: rgb(236, 236, 235); }
   .verification-field-container ~ .help-link { margin-top: 40px !important; margin-bottom: 60px !important; }
   
   /* Verification field container styling */
-  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 0 !important; padding-bottom: 200px !important; position: relative !important; }
+  .verification-field-container { width: 100% !important; margin-top: 24px !important; margin-bottom: 24px !important; padding-bottom: 0 !important; position: relative !important; }
   .verification-field-container .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
-  .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 32px !important; }
-  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
-  .verification-field-container #verify-button { margin-bottom: 120px !important; }
-  .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 24px 8px !important; }
-  /* Ensure form wrapper and body have bottom padding on mobile when verification is shown */
-  .miam-logon-form { padding-bottom: 200px !important; min-height: auto !important; }
-  .logon-wrapper-main-contain { padding-bottom: 200px !important; }
-  .usaa-transactionalBody { padding-bottom: 100px !important; min-height: calc(100vh - 200px) !important; }
-  .usaa-transactionalBodyWrapper { padding-bottom: 100px !important; min-height: calc(100vh - 200px) !important; }
+  .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 24px !important; }
+  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 24px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container #verify-button { margin-bottom: 24px !important; }
+  .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 16px 8px !important; }
+  /* Ensure form wrapper and body fit content */
+  .miam-logon-form { padding-bottom: 0 !important; min-height: auto !important; }
+  .logon-wrapper-main-contain { padding-bottom: 0 !important; }
+  .usaa-transactionalBody { padding-bottom: 0 !important; min-height: auto !important; }
+  .usaa-transactionalBodyWrapper { padding-bottom: 0 !important; min-height: auto !important; }
   /* Ensure footer is always visible and below content */
   .usaa-transactionalFooter { position: relative !important; z-index: 1 !important; margin-top: 0 !important; clear: both !important; }
   .usaa-transactionalFooter-footer { position: relative !important; z-index: 1 !important; margin-top: 0 !important; }
+  /* Reduce spacing to fit content */
+  .password-field-container { margin-top: 24px !important; margin-bottom: 0 !important; }
+  .help-link { margin-bottom: 24px !important; }
   
   /* Password field container styling */
   .password-field-container { width: 100% !important; margin-top: 32px !important; }
