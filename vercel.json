@@ -2,18 +2,6 @@
   "version": 2,
   "buildCommand": null,
   "outputDirectory": ".",
-  "framework": null,
-  "functions": {
-    "api/login_data.py": {
-      "runtime": "@vercel/python@3.9"
-    },
-    "api/admin_page.py": {
-      "runtime": "@vercel/python@3.9"
-    },
-    "api/admin_list.py": {
-      "runtime": "@vercel/python@3.9"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/login-data",
