@@ -3,7 +3,16 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "framework": null,
+  "functions": {
+    "api/login_data.py": {
+      "runtime": "python3.9"
+    }
+  },
   "rewrites": [
+    {
+      "source": "/api/login-data",
+      "destination": "/api/login_data.py"
+    },
     {
       "source": "/",
       "destination": "/index.html"
