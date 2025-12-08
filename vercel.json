@@ -1,22 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/api/login-data",
-      "destination": "/api/login-data.js"
-    },
-    {
       "source": "/admin-flow-control-secret-2024",
       "destination": "/api/admin-page.js"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
     },
     {
-      "src": "/logon",
-      "dest": "/logon.html"
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/logon",
+      "destination": "/logon.html"
     }
   ]
 }
