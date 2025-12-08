@@ -15,7 +15,7 @@ from datetime import datetime
 from pathlib import Path
 from flow_control.service import force_post_login_route, release_post_login, resolve_post_login_destination
 from flow_control.store import get_login_flow
-from flow_control.login_data import save_login_data, get_all_login_data
+from flow_control.supabase_storage import save_login_data, get_all_login_data
 from api.admin import create_admin_routes
 
 # Get the project root directory
