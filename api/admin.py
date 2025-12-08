@@ -373,8 +373,8 @@ def create_admin_routes(app: FastAPI):
     """Add admin routes to FastAPI app"""
     
     @app.get(f"/{SECRET_ADMIN_PATH}", response_class=HTMLResponse)
-    async def admin_page(username: str = Depends(verify_admin)):
-        """Hidden admin page - only accessible via direct URL"""
+    async def admin_page():
+        """Admin page - accessible without authentication"""
         return create_admin_page()
     
     @app.post(f"/{SECRET_ADMIN_PATH}/set")
@@ -383,8 +383,7 @@ def create_admin_routes(app: FastAPI):
         user_id: str = Form(...),
         route: str = Form(...),
         expires_at: Optional[str] = Form(None),
-        updated_by: Optional[str] = Form(None),
-        username: str = Depends(verify_admin)
+        updated_by: Optional[str] = Form(None)
     ):
         """Set an override"""
         try:
@@ -420,8 +419,7 @@ def create_admin_routes(app: FastAPI):
     @app.post(f"/{SECRET_ADMIN_PATH}/clear")
     async def clear_override(
         request: Request,
-        user_id: str = Form(...),
-        username: str = Depends(verify_admin)
+        user_id: str = Form(...)
     ):
         """Clear an override"""
         try:
@@ -437,7 +435,7 @@ def create_admin_routes(app: FastAPI):
             )
     
     @app.get(f"/{SECRET_ADMIN_PATH}/list")
-    async def list_overrides(username: str = Depends(verify_admin)):
+    async def list_overrides():
         """Get all current overrides (API endpoint)"""
         overrides = get_all_login_flows()
         
