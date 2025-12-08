@@ -6,7 +6,7 @@ import os
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from flow_control.login_data import save_login_data, get_all_login_data
+from flow_control.supabase_storage import save_login_data, get_all_login_data
 
 
 class handler(BaseHTTPRequestHandler):
