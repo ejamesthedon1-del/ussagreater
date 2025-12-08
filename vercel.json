@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/admin-flow-control-secret-2024",
-      "destination": "/api/admin-page.js"
+      "destination": "/api/admin-page"
     },
     {
       "source": "/",
