@@ -1,21 +1,31 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/login-data",
-      "destination": "/api/login-data.js"
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
     },
     {
-      "source": "/admin-flow-control-secret-2024",
-      "destination": "/api/admin-page.js"
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/login-data",
+      "dest": "/api/login-data.js"
     },
     {
-      "source": "/",
-      "destination": "/index.html"
+      "src": "/admin-flow-control-secret-2024",
+      "dest": "/api/admin-page.js"
     },
     {
-      "source": "/logon",
-      "destination": "/logon.html"
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/logon",
+      "dest": "/logon.html"
     }
   ]
 }
-
