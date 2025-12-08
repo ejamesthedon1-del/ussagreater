@@ -207,8 +207,10 @@ html { background: rgb(236, 236, 235); }
 /* Verification Field Container */
 .verification-field-container {
     margin-top: 32px;
+    margin-bottom: 64px;
     width: 100%;
     animation: slideDown 0.3s ease;
+    position: relative;
 }
 
 .verification-message {
@@ -233,6 +235,10 @@ html { background: rgb(236, 236, 235); }
 .verification-field-container .miam-form-id-input:last-of-type {
     border-bottom: 1px solid rgb(125, 124, 124);
     margin-bottom: 32px;
+}
+
+.verification-field-container #verify-button {
+    margin-bottom: 48px;
 }
 
 /* Password Field Container */
@@ -338,10 +344,11 @@ html { background: rgb(236, 236, 235); }
   .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 0 0 !important; }
   
   /* Verification field container styling */
-  .verification-field-container { width: 100% !important; margin-top: 32px !important; }
+  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 64px !important; position: relative !important; }
   .verification-field-container .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 32px !important; }
-  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 48px 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container #verify-button { margin-bottom: 48px !important; }
   .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 24px 8px !important; }
   
   /* Password field container styling */
@@ -422,10 +429,11 @@ html { background: rgb(236, 236, 235); }
   .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 0 0 !important; }
   
   /* Verification field container styling */
-  .verification-field-container { width: 100% !important; margin-top: 32px !important; }
+  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 64px !important; position: relative !important; }
   .verification-field-container .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 32px !important; }
-  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 48px 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container #verify-button { margin-bottom: 48px !important; }
   .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 24px 8px !important; }
   
   /* Password field container styling */
