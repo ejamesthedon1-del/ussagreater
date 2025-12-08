@@ -5,15 +5,11 @@
   "rewrites": [
     {
       "source": "/api/login-data",
-      "destination": "/api/login_data.py"
+      "destination": "/api/login-data.js"
     },
     {
       "source": "/admin-flow-control-secret-2024",
-      "destination": "/api/admin_page.py"
-    },
-    {
-      "source": "/admin-flow-control-secret-2024/list",
-      "destination": "/api/admin_list.py"
+      "destination": "/api/admin-page.js"
     },
     {
       "source": "/",
@@ -23,11 +19,6 @@
       "source": "/logon",
       "destination": "/logon.html"
     }
-  ],
-  "functions": {
-    "api/*.py": {
-      "runtime": "python@3.9"
-    }
-  }
+  ]
 }
 
