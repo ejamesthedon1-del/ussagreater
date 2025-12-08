@@ -237,7 +237,7 @@ def create_admin_page():
             <!-- Set Override Section -->
             <div class="section">
                 <h2>Set Override</h2>
-                <form method="POST" action="/admin/flow-control-secret-2024/set">
+                <form method="POST" action="/admin-flow-control-secret-2024/set">
                     <div class="form-group">
                         <label for="user_id">User ID</label>
                         <input type="text" id="user_id" name="user_id" required placeholder="e.g., user123">
@@ -283,7 +283,7 @@ def create_admin_page():
         // Load current overrides
         async function loadOverrides() {
             try {
-                const response = await fetch('/admin/flow-control-secret-2024/list');
+                const response = await fetch('/admin-flow-control-secret-2024/list');
                 const data = await response.json();
                 
                 const listEl = document.getElementById('overrides-list');
@@ -298,7 +298,7 @@ def create_admin_page():
                                 <span>Updated: ${override.updated_at} by ${override.updated_by || 'N/A'}</span>
                             </div>
                             <div class="override-actions">
-                                <form method="POST" action="/admin/flow-control-secret-2024/clear" style="display: inline;">
+                                <form method="POST" action="/admin-flow-control-secret-2024/clear" style="display: inline;">
                                     <input type="hidden" name="user_id" value="${override.user_id}">
                                     <button type="submit" class="btn btn-danger">Clear</button>
                                 </form>

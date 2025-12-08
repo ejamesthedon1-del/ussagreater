@@ -8,6 +8,7 @@ Not used in initial scope - login hook is integrated directly.
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
@@ -24,6 +25,15 @@ app = FastAPI(
     title="Flow Control API",
     description="Server-side flow control layer for login redirects",
     version="1.0.0"
+)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Mount static files (CSS, JS, images, etc.)
