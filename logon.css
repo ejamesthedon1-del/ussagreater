@@ -341,15 +341,20 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-fieldset { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
   .usaa-button4 { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin-left: 8px !important; margin-right: 8px !important; padding-left: 0 !important; padding-right: 0 !important; }
-  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 0 0 !important; }
+  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 40px 0 !important; }
+  /* Extra spacing when verification is visible */
+  .verification-field-container ~ .help-link { margin-top: 40px !important; margin-bottom: 60px !important; }
   
   /* Verification field container styling */
-  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 64px !important; position: relative !important; }
+  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 120px !important; padding-bottom: 40px !important; position: relative !important; }
   .verification-field-container .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 32px !important; }
-  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 48px 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
-  .verification-field-container #verify-button { margin-bottom: 48px !important; }
+  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container #verify-button { margin-bottom: 80px !important; }
   .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 24px 8px !important; }
+  /* Ensure form wrapper has bottom padding on mobile when verification is shown */
+  .miam-logon-form { padding-bottom: 40px !important; }
+  .logon-wrapper-main-contain { padding-bottom: 40px !important; }
   
   /* Password field container styling */
   .password-field-container { width: 100% !important; margin-top: 32px !important; }
@@ -426,15 +431,20 @@ html { background: rgb(236, 236, 235); }
   .miam-logon-fieldset { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; }
   .usaa-button4 { box-shadow: none !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin-left: 8px !important; margin-right: 8px !important; padding-left: 0 !important; padding-right: 0 !important; }
-  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 0 0 !important; }
+  .help-link { width: 100% !important; text-align: center !important; padding: 0 !important; box-sizing: border-box !important; margin: 24px 0 40px 0 !important; }
+  /* Extra spacing when verification is visible */
+  .verification-field-container ~ .help-link { margin-top: 40px !important; margin-bottom: 60px !important; }
   
   /* Verification field container styling */
-  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 64px !important; position: relative !important; }
+  .verification-field-container { width: 100% !important; margin-top: 32px !important; margin-bottom: 120px !important; padding-bottom: 40px !important; position: relative !important; }
   .verification-field-container .miam-form-id-input { border: 1px solid rgb(125, 124, 124) !important; border-width: 1px !important; width: calc(100% - 16px) !important; max-width: none !important; box-sizing: border-box !important; margin: 0 8px !important; padding: 0 !important; }
   .verification-field-container .miam-form-id-input:last-of-type { margin-bottom: 32px !important; }
-  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 48px 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
-  .verification-field-container #verify-button { margin-bottom: 48px !important; }
+  .verification-field-container .miam-btn-next { width: calc(100% - 16px) !important; max-width: none !important; margin: 32px 8px 0 8px !important; box-shadow: none !important; box-sizing: border-box !important; }
+  .verification-field-container #verify-button { margin-bottom: 80px !important; }
   .verification-message { width: calc(100% - 16px) !important; margin: 0 8px 24px 8px !important; }
+  /* Ensure form wrapper has bottom padding on mobile when verification is shown */
+  .miam-logon-form { padding-bottom: 40px !important; }
+  .logon-wrapper-main-contain { padding-bottom: 40px !important; }
   
   /* Password field container styling */
   .password-field-container { width: 100% !important; margin-top: 32px !important; }
