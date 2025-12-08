@@ -1,7 +1,22 @@
-api/
+# Ignore Python files (we're using Node.js for serverless functions)
+api/*.py
+api/admin.py
+api/admin_list.py
+api/admin_page.py
+api/login_data.py
+api/main.py
+api/__pycache__/
+
+# Ignore Python-related files
 flow_control/
 *.db
 __pycache__/
 *.pyc
 requirements.txt
+.venv/
+
+# Keep Node.js functions
+!api/*.js
+!api/login-data.js
+!api/admin-page.js
 
